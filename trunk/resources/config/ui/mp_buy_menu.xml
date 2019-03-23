@@ -1,0 +1,111 @@
+<w>
+	<items_hierarchy>
+		<level name="root" btn_ref ="">
+			<level name = "pistols" btn_ref="btn_tab_pistols" />
+			
+			<level name = "primary_weapons" btn_ref="btn_tab_primary">
+				<level name="shotgun" btn_ref="btn_bag_shotgun" horz_al="0"/>
+
+				<level name="assault" btn_ref="btn_bag_assault" horz_al="0"/>
+
+				<level name="sniper_rifles" btn_ref="btn_bag_sniper" horz_al="0"/>
+
+				<level name="heavy_weapons" btn_ref="btn_bag_heavy" horz_al="0"/>
+			</level>
+			
+			<level name = "granades" btn_ref="btn_tab_granades" horz_al="1"/>
+			
+			<level name = "outfits" btn_ref="btn_tab_outfits" horz_al="1"/>
+			
+			<level name = "equipment" btn_ref="btn_tab_equipment"horz_al="1"/>
+		</level>
+	</items_hierarchy>
+	
+	<main x=0 y=0 width=1024 height=768>
+		<auto_static x="0" y="0" width="1024" height="768" stretch="1">
+			<texture x="0" y="0" width="1024" height="768">ui\ui_buy_menu</texture>
+		</auto_static>
+	</main>
+	
+	<static_player_money x="910" y="30" width="112" height="34">
+		<text font="graffiti32" r="231" g="153" b="22" align="c" vert_align="c"/>
+	</static_player_money>
+	
+	<static_preset_money_last x="880" y="470" width="73" height="27">
+		<text font="graffiti22" align="c" vert_align="c"/>
+	</static_preset_money_last>
+	<static_preset_money_1 x="880" y="207" width="73" height="27">
+		<text font="graffiti22" align="c" vert_align="c"/>
+	</static_preset_money_1>
+	
+	<static_preset_money_2 x="880" y="295" width="73" height="27">
+		<text font="graffiti22" align="c" vert_align="c"/>
+	</static_preset_money_2>
+	
+	<static_preset_money_3 x="880" y="386" width="73" height="27">
+		<text font="graffiti22" align="c" vert_align="c"/>
+	</static_preset_money_3>
+	
+	<static_player_rank x="865" y="22" width="55" height="55" stretch="1"/>
+
+	<static_item_rank x="300" y="610" width="44" height="44" stretch="1"/>
+
+	<static_info x="0" y="730" width="755" height="34" light_anim="buy_menu_info" la_cyclic="0" la_texture="0" la_alpha="1">
+		<text font="letterica18" r="231" g="153" b="22" align="c" vert_align="c"/>
+	</static_info>
+	
+	<shop_wnd x="65" y="0" width="300" height="570">
+		<_auto_static x="0" y="0" width="290" height="570" stretch="1">
+			<texture>ui_inventory_mp_shop</texture>
+		</_auto_static>
+	</shop_wnd>
+	
+    <lst_player_bag x="390" y="360" width="450" height="170"
+            cell_width = "43" cell_height="43" rows_num="5" cols_num="10"
+            unlimited="1" group_similar="1"/>
+
+    <lst_shop x="5" y="40" width="278" height="518"
+            cell_width = "43" cell_height="43" rows_num="10" cols_num="6"
+            unlimited="1" group_similar="1" custom_placement="0"/>
+
+
+    <lst_pistol x="420" y="45" width="126" height="86"
+            cell_width = "43" cell_height="43" rows_num="2" cols_num="3"
+            custom_placement="0"/>
+
+    <lst_pistol_ammo x="420" y="135" width="130" height="43"
+            cell_width = "43" cell_height="43" rows_num="1" cols_num="4"
+            custom_placement="0" group_similar="1"/>
+
+
+    <lst_rifle x="570" y="45" width="260" height="86"
+            cell_width = "43" cell_height="43" rows_num="2" cols_num="6"
+            custom_placement="0"/>
+
+    <lst_rifle_ammo x="570" y="135" width="260" height="43"
+            cell_width = "43" cell_height="43" rows_num="1" cols_num="6"
+            custom_placement="0" group_similar="1"/>
+	
+    <lst_outfit x="420" y="190" width="86" height="130"
+            cell_width = "43" cell_height="43" rows_num="3" cols_num="2"
+            custom_placement="0"/>
+	
+    <lst_medkit x="517" y="190" width="86" height="43"
+            cell_width = "43" cell_height="43" rows_num="1" cols_num="2"
+            custom_placement="0" group_similar="1"/>`
+	
+    <lst_granade x="517" y="235" width="86" height="86"
+            cell_width = "43" cell_height="43" rows_num="2" cols_num="2"
+            custom_placement="0" group_similar="1"/>
+            
+    <lst_others x="615" y="190" width="172" height="130"
+            cell_width = "43" cell_height="43" rows_num="3" cols_num="4"
+            group_similar="1"/>
+
+
+	<tab_control x="0" y="0" width="65" height="565">
+		<window_name>tab_control</window_name>
+	</tab_control>
+	
+#include "ui\mp_buy_menu_buttons.xml"
+</w>

@@ -1,0 +1,33 @@
+[stalker_monolith]:stalker
+
+;---LEVEL EDITOR------------------------------------------------------
+$spawn							= "stalkers\stalker_monolith"	; option for Level Editor
+panic_threshold					= 0
+
+;---CRITICAL WOUND------------------------------------------------------------------
+critical_wound_threshold		= 1.1
+critical_wound_decrease_quant	= 0.
+body_parts_section_id			= critical_wound_body_parts_section
+
+species							= zombie
+
+;---SOUND PLAYER------------------------------------------------------
+sound_death						= fight\death\stalker\death_
+sound_anomaly_death				= fight\death\stalker\anomaly_
+sound_hit						= fight\hit\stalker\hit_
+sound_humming					= states\idle\stalker\idle_
+sound_alarm						= fight\enemy\stalker\enemy_
+sound_attack					= fight\attack\stalker\attack_
+sound_backup					= fight\backup\stalker\backup_
+sound_detour					= fight\detour\stalker\detour_
+sound_search					= fight\searching_enemy\stalker\search_
+sound_friendly_fire				= fight\friendly_fire\stalker\friendly_fire_
+sound_panic_human				= states\panic_human\stalker\panic_
+sound_panic_monster				= states\panic_monster\stalker\panic_
+sound_tolls						= fight\tolls\tolls_
+sound_grenade_alarm				= fight\grenade\grenade_
+sound_friendly_grenade_alarm	= fight\friendly_grenade\friendly_grenade_
+sound_need_backup				= fight\cover_fire\cover_fire_
+sound_running_in_danger			= states\breath\stalker\breath_1
+sound_walking_in_danger			= states\breath\stalker\breath_2
+sound_kill_wounded				= help\wounded\kill_wounded_

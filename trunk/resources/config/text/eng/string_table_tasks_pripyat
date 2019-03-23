@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+<string_table>
+	<string id="pripyat_task_objective_1">
+		<text>Follow the group</text>
+	</string>
+	<string id="pripyat_task_objective_2">
+		<text>Get to the stadium entrance</text>
+	</string>
+	<string id="pripyat_task_title">
+		<text>Пробиться через Припять</text>
+	</string>
+</string_table>

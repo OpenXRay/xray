@@ -1,0 +1,40 @@
+#!/usr/local/bin/expect
+# -*-C++-*- boost.heap/r_heap.exp -- C++ is actually a lie but it helps
+# <!!----------------------------------------------------------------------> 
+# <!! Copyright (C) 1999 Dietmar Kuehl, Claas Solutions GmbH > 
+# <!!> 
+# <!! Permission to use, copy, modify, distribute and sell this > 
+# <!! software for any purpose is hereby granted without fee, provided > 
+# <!! that the above copyright notice appears in all copies and that > 
+# <!! both that copyright notice and this permission notice appear in > 
+# <!! supporting documentation. Dietmar Kuehl and Claas Solutions make no > 
+# <!! representations about the suitability of this software for any > 
+# <!! purpose. It is provided "as is" without express or implied warranty. > 
+# <!!----------------------------------------------------------------------> 
+
+# Author: Dietmar Kuehl dietmar.kuehl@claas-solutions.de 
+# Title:  Interface test for the Radix heap
+# Version: $Id: r_heap.exp,v 1.2 1999/07/12 18:57:42 kuehl Exp $ 
+
+# -------------------------------------------------------------------------- 
+
+inline_compile {
+  #include "boost/r_heap.hpp"
+
+  struct Val {};
+  struct traits
+  {
+    static unsigned long value(Val) { return 0ul; }
+    static unsigned long radix(Val, unsigned long) { return 0ul; }
+  };
+  
+  int main()
+  {
+    boost::radix_heap<Val, traits> heap;
+    heap.push(Val());
+    heap.top();
+    heap.pop();
+    heap.empty();
+    heap.size();
+  }
+}

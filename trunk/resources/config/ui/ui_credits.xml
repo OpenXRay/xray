@@ -1,0 +1,103 @@
+
+	<credits_seq>
+		<global_wnd x="0" y="0" width="1024" height="768">
+			
+			<auto_static x="0" y="0" width="728" height="660" stretch = "1">		
+						<texture>ui\credits_back_512_v10</texture>
+			</auto_static>
+			
+			
+			<auto_static x="0" y="0" width="1024" height="768">
+				<texture x="0" y="0" width="1024" height="768">ui\ui_static_mm_back_06</texture>
+			</auto_static>
+			<auto_static x="524" y="641" width="256" height="128">
+				<texture>ui\ui_mm_coal</texture>
+			</auto_static>
+			
+			
+		</global_wnd>
+		
+		<play_each_item>1</play_each_item>
+
+		<item>
+			<length_sec>20</length_sec>
+			<pause_state>on</pause_state>
+			<function_on_stop>xr_effects.game_over</function_on_stop>
+			<guard_key/>
+			<sound/>
+			<cursor_pos/>
+			<pda_section/>
+			<grab_input>1</grab_input>
+			<main_wnd>
+			
+			
+				<auto_static start_time="0" length_sec="45" x="185" y="30" width="330" height="40" light_anim="credits_head" la_cyclic="0" la_texture="0" la_alpha="1">
+					<text align="c" font="graffiti50" color="white">GSC stuff</text>
+				</auto_static>
+				
+				<!-- next frame -->
+				<auto_static start_time="2" length_sec="5" x="185" y="100" width="330" height="40" light_anim="credits_vis" la_cyclic="0" la_texture="0" la_alpha="1">
+					<text align="c" font="letterica25" color="white">Project Manager</text>
+				</auto_static>
+				<auto_static start_time="3" length_sec="4" x="40" y="150" width="300" height="40" light_anim="credits_vis_sub" la_cyclic="0" la_texture="0" la_alpha="1">
+					<text align="r" font="graffiti32" color="ui_clr_1">Anton</text>	</auto_static>
+				<auto_static start_time="3" length_sec="4" x="360" y="150" width="350" height="40" light_anim="credits_vis_sub" la_cyclic="0" la_texture="0" la_alpha="1">
+					<text align="l" font="graffiti32" color="ui_clr_1">Bolshakov</text>	</auto_static>
+
+
+				<!-- next frame -->
+				<auto_static start_time="8" length_sec="5" x="185" y="100" width="330" height="40" light_anim="credits_vis" la_cyclic="0" la_texture="0" la_alpha="1">
+					<text align="c" font="letterica25" color="white">Lead Programmers</text>
+				</auto_static>
+				
+				<auto_static start_time="9" length_sec="4" x="40" y="150" width="300" height="40" light_anim="credits_vis_sub" la_cyclic="0" la_texture="0" la_alpha="1">
+					<text align="r" font="graffiti32" color="ui_clr_1">Alexander</text>	</auto_static>
+				<auto_static start_time="9" length_sec="4" x="360" y="150" width="350" height="40" light_anim="credits_vis_sub" la_cyclic="0" la_texture="0" la_alpha="1">
+					<text align="l" font="graffiti32" color="ui_clr_1">Maximchuk</text>	</auto_static>
+				
+				<auto_static start_time="9" length_sec="4" x="40" y="180" width="300" height="40" light_anim="credits_vis_sub" la_cyclic="0" la_texture="0" la_alpha="1">
+					<text align="r" font="graffiti32" color="ui_clr_1">Oles</text> </auto_static>
+					
+				<auto_static start_time="9" length_sec="4" x="360" y="180" width="350" height="40" light_anim="credits_vis_sub" la_cyclic="0" la_texture="0" la_alpha="1">
+					<text align="l" font="graffiti32" color="ui_clr_1">Shyskovtsov</text> </auto_static>
+
+
+				<!-- next frame -->
+				<auto_static start_time="14" length_sec="5" x="185" y="100" width="330" height="40" light_anim="credits_vis" la_cyclic="0" la_texture="0" la_alpha="1">
+					<text align="c" font="letterica25" color="white">Programmers</text>
+				</auto_static>
+				<auto_static start_time="15" length_sec="4" x="40" y="150" width="300" height="40" light_anim="credits_vis_sub" la_cyclic="0" la_texture="0" la_alpha="1">
+					<text align="r" font="graffiti32" color="ui_clr_1">Dmitriy</text> </auto_static>
+				<auto_static start_time="15" length_sec="4" x="360" y="150" width="350" height="40" light_anim="credits_vis_sub" la_cyclic="0" la_texture="0" la_alpha="1">
+					<text align="l" font="graffiti32" color="ui_clr_1">Iassenev (AI)</text>	</auto_static>
+				
+				<auto_static start_time="15" length_sec="4" x="40" y="180" width="300" height="40" light_anim="credits_vis_sub" la_cyclic="0" la_texture="0" la_alpha="1">
+					<text align="r" font="graffiti32" color="ui_clr_1">Sergey</text> </auto_static>
+				<auto_static start_time="15" length_sec="4" x="360" y="180" width="350" height="40" light_anim="credits_vis_sub" la_cyclic="0" la_texture="0" la_alpha="1">
+					<text align="l" font="graffiti32" color="ui_clr_1">Zhemeytsev (Monster's AI)</text>	</auto_static>
+				
+				<auto_static start_time="15" length_sec="4" x="40" y="210" width="300" height="40" light_anim="credits_vis_sub" la_cyclic="0" la_texture="0" la_alpha="1">
+					<text align="r" font="graffiti32" color="ui_clr_1">Vitaliy</text> </auto_static>
+				<auto_static start_time="15" length_sec="4" x="360" y="210" width="350" height="40" light_anim="credits_vis_sub" la_cyclic="0" la_texture="0" la_alpha="1">
+					<text align="l" font="graffiti32" color="ui_clr_1">Maximov (Network)</text>	</auto_static>
+				
+				<auto_static start_time="15" length_sec="4" x="40" y="240" width="300" height="40" light_anim="credits_vis_sub" la_cyclic="0" la_texture="0" la_alpha="1">
+					<text align="r" font="graffiti32" color="ui_clr_1">Konstantin</text> </auto_static>
+				<auto_static start_time="15" length_sec="4" x="360" y="240" width="350" height="40" light_anim="credits_vis_sub" la_cyclic="0" la_texture="0" la_alpha="1">
+					<text align="l" font="graffiti32" color="ui_clr_1">Slipchenko (Phisics)</text>	</auto_static>
+				
+				<auto_static start_time="15" length_sec="4" x="40" y="270" width="300" height="40" light_anim="credits_vis_sub" la_cyclic="0" la_texture="0" la_alpha="1">
+					<text align="r" font="graffiti32" color="ui_clr_1">Andrew</text> </auto_static>
+				<auto_static start_time="15" length_sec="4" x="360" y="270" width="350" height="40" light_anim="credits_vis_sub" la_cyclic="0" la_texture="0" la_alpha="1">
+					<text align="l" font="graffiti32" color="ui_clr_1">Kolomiets (Gameplay Engine)</text>	</auto_static>
+
+				<auto_static start_time="15" length_sec="4" x="40" y="300" width="300" height="40" light_anim="credits_vis_sub" la_cyclic="0" la_texture="0" la_alpha="1">
+					<text align="r" font="graffiti32" color="ui_clr_1">Sergey</text> </auto_static>
+				<auto_static start_time="15" length_sec="4" x="360" y="300" width="350" height="40" light_anim="credits_vis_sub" la_cyclic="0" la_texture="0" la_alpha="1">
+					<text align="l" font="graffiti32" color="ui_clr_1">Vynnychenko (GUI)</text>	</auto_static>
+
+
+			</main_wnd>
+		</item>
+
+	</credits_seq>

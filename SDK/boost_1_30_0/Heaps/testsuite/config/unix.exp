@@ -1,0 +1,84 @@
+# <!!-*-C++-*- file: unix.exp --->
+# <!!-------------------------------------------------------------------------->
+# <!! Copyright (C) 1996 Dietmar Kuehl >
+# <!!   Universitaet Konstanz, Lehrstuhl fuer praktische Informatik I >
+# <!!>
+# <!! This file is free software; you can redistribute it and/or modify >
+# <!! it under the terms of the GNU General Public License as published by >
+# <!! the Free Software Foundation; either version 2 of the License, or >
+# <!! (at your option) any later version. >
+# <!!>
+# <!! This file is distributed in the hope that it will be useful, >
+# <!! but WITHOUT ANY WARRANTY; without even the implied warranty of >
+# <!! MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the >
+# <!! GNU General Public License for more details. >
+# <!!-------------------------------------------------------------------------->
+
+# Author: Dietmar Kühl dietmar.kuehl@uni-konstanz.de http://www.informatik.uni-konstanz.de/~kuehl
+# Title:  The init file for unix.
+
+# libtest.exp provides several frontends for $(tool)_start and $(tool)_load.
+
+set exec_output ""
+load_lib libtest.exp
+
+# $(tool)_start is used to compile and link a test file. The compiler and linker
+# flags are basically figured out by the Makefile (i.e. are found in 'site.exp').
+# Only additional flags and libraries have to be passed. All files are compiled
+# in sequence. If one fails '1' is returned. If linking fails '2' is returned.
+# Otherwise '0' is returned.
+
+proc [set tool]_start {files cflags libs ldflags} {
+  global CXX
+  global CXXFLAGS
+  global LDFLAGS
+  global LIBS
+
+  set tindex 0
+  set ofiles ""
+  foreach file $files {
+    # send_user "$CXX $CXXFLAGS $cflags -c -o tmp$tindex.o $file"
+    if {[catch {eval "exec $CXX $CXXFLAGS $cflags -c -o tmp$tindex.o $file"}]} {
+      # clean up, then signal an error upward...
+      eval "exec rm -f $ofiles dummy"
+      return 1
+    }
+
+    lappend ofiles "tmp$tindex.o"
+    incr tindex
+  }
+  # send_user "$CXX $LDFLAGS $ldflags -o test.out $ofiles $LIBS $libs"
+  if {[catch {eval "exec $CXX $LDFLAGS $ldflags -o test.out $ofiles $LIBS $libs"}]} {
+    set rc 2
+  } else {
+    set rc 0
+  }
+  eval "exec rm -f $ofiles dummy"
+
+  return $rc
+}
+
+proc [set tool]_load {args} {
+  global exec_output
+
+  if {[catch {set exec_output [eval "exec test.out [split $args " "]"]}]} {
+    eval "exec cp test.out bug"
+    set rc 1
+  } else {
+    set rc 0
+  }
+  return $rc
+}
+
+proc [set tool]_exit {} {
+  exec rm -f test.out
+  libtest_cleanup
+  return 0
+}
+
+proc [set tool]_version {} {
+  global tool
+
+  clone_output "[exec ./[set tool]_version]"
+  return 0
+}

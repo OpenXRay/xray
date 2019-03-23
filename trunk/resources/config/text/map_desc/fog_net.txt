@@ -1,0 +1,6 @@
+[map_info]
+name = "Fog Net"
+players = 32
+modes = "Deathmatch, TeamdDeathmatch, Artefacthunt"
+short_desc = "simple test map for MP debug"
+large_desc = "simple test map for MP debug"

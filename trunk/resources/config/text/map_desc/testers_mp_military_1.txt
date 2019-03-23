@@ -1,0 +1,6 @@
+[map_info]
+name = "Military 1"
+players = 8-32
+modes = "Deathmatch, TeamdDeathmatch, Artefacthunt"
+short_desc = "ui_map_desc_mp_military_1_short"
+large_desc = "ui_map_desc_mp_military_1_large"

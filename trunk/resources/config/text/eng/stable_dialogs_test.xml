@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="windows-1251" standalone="no" ?>
+<string_table>
+    <string id="gar_dolg_bribe_1">
+        <text>Мне нужно пройти на завод &amp;amp;amp;quot;Росток&amp;amp;amp;quot; к бару сталкеров.</text>
+    </string>
+    <string id="gar_dolg_bribe_11">
+        <text>К бару не пропустим - новичкам там нечего делать. Хотя… Трудно сейчас, денег нет, дома жена, дети сопливые, кушать хотят. В общем, при улучшении моего материального положения рублей так на 50 я мог бы отвернуться на 5 минут от охраняемого прохода на &amp;amp;amp;quot;Росток&amp;amp;amp;quot;.\n*** До получения документов в НИИ Агропром ***</text>
+    </string>
+    <string id="gar_dolg_bribe_111">
+        <text>Согласен. Держи.\n***Снимается со счета 50 рублей***</text>
+    </string>
+    <string id="gar_dolg_bribe_1111">
+        <text>Вот это другое дело. Пропустите его, ребята. Это мой знакомый, его ждут в баре.</text>
+    </string>
+    <string id="gar_dolg_bribe_11111">
+        <text>Пока. Удачи.</text>
+    </string>
+    <string id="gar_dolg_bribe_112">
+        <text>Нет у меня с собой столько денег.</text>
+    </string>
+    <string id="gar_dolg_bribe_1121">
+        <text>Жадный какой... Тогда не пустим.</text>
+    </string>
+    <string id="gar_dolg_bribe_11211">
+        <text>Ну, не особо я и огорчился. Пока.</text>
+    </string>
+    <string id="gar_dolg_bribe_12">
+        <text>Ага, привет. Нам про тебя Бармен говорил. Можешь проходить.\n*** После получения документов в НИИ Агропром ***</text>
+    </string>
+    <string id="gar_dolg_bribe_121">
+        <text>Спасибо, ребята. Бармену привет.</text>
+    </string>
+    <string id="lala1">
+        <text>test1</text>
+    </string>
+    <string id="optional_dialog_test_0">
+        <text>Я с тобой грю?</text>
+    </string>
+    <string id="optional_dialog_test_1">
+        <text>Са мной чиста.</text>
+    </string>
+    <string id="optional_dialog_test_11">
+        <text>Надо же.</text>
+    </string>
+</string_table>

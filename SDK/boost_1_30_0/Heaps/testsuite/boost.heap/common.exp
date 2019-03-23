@@ -1,0 +1,64 @@
+#!/usr/local/bin/expect
+# -*-C++-*- boost.heap/common.exp -- C++ is actually a lie but it helps
+# <!!----------------------------------------------------------------------> 
+# <!! Copyright (C) 1999 Dietmar Kuehl, Claas Solutions GmbH > 
+# <!!> 
+# <!! Permission to use, copy, modify, distribute and sell this > 
+# <!! software for any purpose is hereby granted without fee, provided > 
+# <!! that the above copyright notice appears in all copies and that > 
+# <!! both that copyright notice and this permission notice appear in > 
+# <!! supporting documentation. Dietmar Kuehl and Claas Solutions make no > 
+# <!! representations about the suitability of this software for any > 
+# <!! purpose. It is provided "as is" without express or implied warranty. > 
+# <!!----------------------------------------------------------------------> 
+
+# Author: Dietmar Kuehl dietmar.kuehl@claas-solutions.de 
+# Title:  Test the priority queues for their common interface
+# Version: $Id: common.exp,v 1.2 1999/07/12 18:57:41 kuehl Exp $ 
+
+# -------------------------------------------------------------------------- 
+
+inline_compile {
+  #include "boost/heap.hpp"
+
+  template <typename T>
+    void test_type(T const&) {}
+  template <typename T>
+    void test_ref_type(T) {}
+
+  template <typename Heap>
+  void test_heap()
+    {
+      typedef typename Heap::value_type      value_type;
+      typedef typename Heap::const_reference const_reference;
+      typedef typename Heap::size_type       size_type;
+      typedef typename Heap::const_iterator  const_iterator;
+
+      Heap heap;
+      heap.push(value_type());
+      heap.push(value_type());
+      test_ref_type<const_reference>(heap.top());
+      test_type<size_type>(heap.size());
+      test_type<bool>(heap.empty());
+      test_type<const_iterator>(heap.begin());
+      test_type<const_iterator>(heap.end());
+
+      for (const_iterator it = heap.begin(); it != heap.end(); ++it)
+	test_ref_type<const_reference>(*it);
+
+      heap.pop();
+    }
+
+  int main()
+  {
+    test_heap<boost::d_heap<int> >();
+    test_heap<boost::fibonacci_heap<int> >();
+    test_heap<boost::lazy_fibonacci_heap<int> >();
+    test_heap<boost::pairing_heap<int> >();
+    test_heap<boost::splay_heap<int> >();
+    test_heap<boost::priority_queue<int> >();
+    test_heap<boost::queue<int> >();
+    test_heap<boost::radix_heap<int> >();
+    test_heap<boost::stack<int> >();
+  }
+}

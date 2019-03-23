@@ -1,0 +1,199 @@
+[mp_skins_path]
+skin_path = actors\stalker_mp\
+
+[mp_actor]
+GroupControlSection		= spawn_group
+$spawn 					= "mp_actor"
+$ed_icon				= ed\ed_actor
+$player 				= on
+$prefetch 				= 16
+cform                   = skeleton
+class                   = O_ACTOR
+money					= 200;
+rank					= 3;
+jump_speed              = 6.
+crouch_coef 			= 0.2
+climb_coef				= 0.7
+air_control_param		= 0.1
+max_item_mass			= 40.0
+run_coef                = 2.4
+sprint_koef				= 2.
+run_back_coef			= 1.7
+walk_back_coef			= 0.8
+visual					= actors\hero\stalker_hood.ogf
+;visual					= actors\alpha\pidarka_urban.ogf
+;visual					= temp\_crc_qmt_.ogf
+walk_accel              = 17 ;40 ;17  ;54 ;40
+;texture_prefetch		= ;actors\different_stalkers\mp_skins\stalker_killer_antigas, actors\different_stalkers\mp_skins\stalker_killer_head3, actors\different_stalkers\mp_skins\stalker_killer_head5, actors\different_stalkers\mp_skins\stalker_killer_mask, actors\different_stalkers\mp_skins\stalker_sv_balon_10, actors\different_stalkers\mp_skins\stalker_sv_hood_9, actors\different_stalkers\mp_skins\stalker_sv_rukzak_2, actors\different_stalkers\mp_skins\stalker_sv_rukzak_3, actors\different_stalkers\mp_skins\stalker_sv_nauchniy, actors\different_stalkers\mp_skins\stalker_sv_exoskeleton, actors\different_stalkers\mp_skins\stalker_ki_exoskeleton, actors\different_stalkers\mp_skins\stalker_ki_nauchniy
+texture_prefetch		= actors\stalker_mp\stalker_sv_balon_10,actors\stalker_mp\stalker_sv_hood_9,actors\stalker_mp\stalker_sv_rukzak_3,actors\stalker_mp\stalker_sv_rukzak_2,actors\stalker_mp\stalker_sv_exoskeleton,actors\stalker_mp\stalker_sci_svoboda,actors\stalker_mp\stalker_killer_head_1,actors\stalker_mp\stalker_killer_antigas,actors\stalker_mp\stalker_killer_head_3,actors\stalker_mp\stalker_killer_mask,actors\stalker_mp\stalker_killer_exoskeleton,actors\stalker_mp\stalker_sci_killer
+
+Invincibility_Shield_3rd	= anomaly2\burer_shield_01
+Invincibility_Shield_1st	= anomaly2\bloodsucker_shleyf
+
+;радиус в котром над предметами выводятся их названия
+pickup_info_radius		= 5	;3
+
+; attach params
+attachable_items		= device_torch,attachable_item,hand_radio
+
+ph_box0_center 			= 0.0,  0.9,  0.0
+ph_box0_size 			= 0.35, 0.9,  0.35
+ph_box1_center 			= 0.0,  0.6,  0.0
+ph_box1_size 			= 0.40, 0.6,  0.40
+ph_box2_center 			= 0.0,  0.3,  0.0
+ph_box2_size 			= 0.40, 0.3,  0.40
+ph_crash_speed_min      = 16
+ph_crash_speed_max      = 20
+ph_mass 				= 80
+
+;---------------------------------------------------------------------
+ph_skeleton_airr_lin_factor  = 1.5
+ph_skeleton_airr_ang_factor  = 1.5
+ph_skeleton_hinger_factor1   = 1
+ph_skeleton_ddelay	     	 = 600
+ph_skel_fatal_impulse_factor = 8
+
+weapon_bone0			 = bip01_r_finger1
+weapon_bone1			 = bip01_l_finger1
+weapon_bone2			 = bip01_r_finger11
+
+damage			 = mp_actor_damage
+;---------------------------------------------------------------------
+;actor condition
+
+immunities_sect				= mp_actor_immunities
+condition_sect				= mp_actor_condition
+
+medkit = 0.3					;временно! вместо аптечки
+medkit_wound = 0.2				;сколько процентов кровотечения оставливает аптечка 
+antirad = 0.3					;временно! вместо антирада
+material				= creatures\human
+camera_height_factor	= 0.85
+
+;дисперсия стрельбы с учетом ходьбы и бега
+disp_base			 = 1.2		;угол (в градусах) разлета пуль, когда актер стоит на месте
+disp_vel_factor		 = 2.2		;на сколько увеличится дисперсия при скрости в 10 м/с (не обязательно при беге)
+disp_accel_factor	 = 0.83  	;еще на сколько увеличится, если актер бежит (+ скорость)
+disp_crouch_factor	 = -0.2 	;уменьшение если актер сидит
+
+disp_jump_factor	 = 2.0
+
+missile_throw_offset = 0.3, 0.5, 0.5
+
+body_remove_time = 30000	;время уничтожения трупа (с учетом TimeFactor)
+sleep_time_factor = 400		;во сколько раз время идет быстрее, когда актер спит
+heavy_breath_snd = heart\8		;звук тяжелого дыхания при усталости	
+
+;species of monster
+species				= human
+
+[mp_actor_damage]
+;bone_name		 = <hit_scale>,<fwd_damage_anim_index>,<wound_scale>
+;<hit_scale> - коэфф. изменения хита (уменьшения здоровья) 
+;<wound_scale> - коэфф. изменения величины открытой раны
+;-1 - нет анимаций, четный номер - спереди, нечетный номер - сзади, УКАЗЫВАЕТСЯ ТОЛЬКО ПЕРЕДНИЙ!!! ЗАДНИЙ НА АВТОМАТЕ
+default			 = 1.0, -1, 1.0
+bip01_pelvis 		 = 0.0, 10, 0.0	;от ядра до пояса
+bip01_spine 		 = 0.2, 10, 0.8	;в основном без шейпа
+bip01_spine1 		 = 0.2, 0, 0.8	;торс до шеи
+bip01_neck 			 = 5.0, 0, 1.0	;в основном без шейпа	
+bip01_head 			 = 5.0, 0, 1.0	;очень большой шейп
+eyelid_1 			 = 5.0, 0, 1.0	;очень большой шейп
+eye_left 			 = 5.0, 0, 1.0	;глаза
+eye_right 			 = 5.0, 0, 1.0	;глаза
+jaw_1 		 		 = 5.0, 0, 1.0	;рот от шеи до носа
+
+bip01_l_clavicle	 = 0.1, 4, 0.7	;плечо + bip01_spine1
+bip01_l_upperarm	 = 0.05, 4, 0.6
+bip01_l_forearm	 	 = 0.05, 4, 0.5
+bip01_l_hand	 	 = 0.0, 4, 0.2
+bip01_l_finger0	 	 = 0.0, 4, 0.1
+bip01_l_finger01	 = 0.0, 4, 0.1
+bip01_l_finger02	 = 0.0, 4, 0.1
+bip01_l_finger1	 	 = 0.0, 4, 0.1
+bip01_l_finger11	 = 0.0, 4, 0.1
+bip01_l_finger12	 = 0.0, 4, 0.1
+bip01_l_finger2	 	 = 0.0, 4, 0.1
+bip01_l_finger21	 = 0.0, 4, 0.1
+bip01_l_finger22	 = 0.0, 4, 0.1
+
+bip01_r_clavicle	 = 0.1, 2, 0.7	;плечо + bip01_spine1 
+bip01_r_upperarm	 = 0.05, 2, 0.6
+bip01_r_forearm	 	 = 0.05, 2, 0.5
+bip01_r_hand	 	 = 0.0, 2, 0.2
+bip01_r_finger0	 	 = 0.0, 2, 0.1
+bip01_r_finger01	 = 0.0, 2, 0.1
+bip01_r_finger02	 = 0.0, 2, 0.1
+bip01_r_finger1	 	 = 0.0, 2, 0.1
+bip01_r_finger11	 = 0.0, 2, 0.1
+bip01_r_finger12	 = 0.0, 2, 0.1
+bip01_r_finger2	 	 = 0.0, 2, 0.1
+bip01_r_finger21	 = 0.0, 2, 0.1
+bip01_r_finger22	 = 0.0, 2, 0.1
+
+bip01_l_thigh	 	 = 0.1, 8, 0.5	;бедро
+bip01_l_calf	 	 = 0.05, 8, 0.4	;голень
+bip01_l_foot	 	 = 0.02, 8, 0.3	;пятка
+bip01_l_toe0	 	 = 0.0, 8, 0.2	;пальцы
+bip01_r_thigh	 	 = 0.1, 6, 0.5	;бедро
+bip01_r_calf	 	 = 0.05, 6, 0.4	;голень
+bip01_r_foot	 	 = 0.02, 6, 0.3	;пятка
+bip01_r_toe0	 	 = 0.0, 6, 0.2	;пальцы
+
+
+[mp_actor_immunities]
+burn_immunity 				= 1.0				;коэффициенты иммунитета 
+strike_immunity 			= 1.0
+shock_immunity 				= 1.0
+wound_immunity				= 1.0
+radiation_immunity 			= 1.0
+telepatic_immunity 			= 1.0
+chemical_burn_immunity 		= 1.0
+explosion_immunity 			= 1.0
+fire_wound_immunity  		= 1.0
+
+[mp_actor_condition]
+satiety_v					= 0.0					;скорость уменьшения сытости со временем
+radiation_v					= 0.0001				;скорость уменьшения радиации
+satiety_power_v				= 0.000055				;увеличение силы при уменьшении сытости
+satiety_health_v			= 0.00005				;увеличение здоровья при уменьшении сытости
+satiety_critical			= 0.0					;критическое значения сытости (в процентах от 0..1) когда здоровье начианает уменьшаться
+radiation_health_v			= 0.001					;уменьшение здоровья при воздействии радиации
+morale_v					= 0.0001				;скорость восстановления морали
+health_hit_part				= 1.0					;процент хита, уходящий на отнимание здоровья
+power_hit_part				= 0.01					;процент хита, уходящий на отнимание силы
+
+;открытые раны
+bleeding_v					= 0.00125				;потеря крови при номинальной ране в секунду
+wound_incarnation_v			= 0.04					;крутизна кривой заживления (какой процент раны заживет в игровую секунду)
+min_wound_size				= 0.08					;минимальный размер раны, после которого она считается зажившей
+
+sleep_health				= 1.0		;1.5		;коэффициенты скоростей изменения параметров во время сна
+sleep_power					= 1.0		;1.5
+sleep_satiety				= 1.0		;0.8
+sleep_radiation				= 1.0		;1.1
+
+;;;;;;;;
+;actor_condition only
+
+jump_power				=	0.1			;0.005					;умешьшение силы с прыжком без учета веса ноши
+jump_weight_power			=	0.0				;0.045					;умешьшение силы с прыжком с учетом веса ноши, для максимального допустимого веса
+overweight_jump_k			=	10				;10					;коэффициент влияние перегрузки прыжок с весом (умножается на jump_weight_power)
+
+stand_power				=	-0.007								
+walk_power				=	0.000001			;умешьшение силы за секнду во время ходьбы без учета веса ноши
+walk_weight_power			=	0.00			;умешьшение силы за секнду во время ходьбы с учетом веса ноши, для максимального допустимого веса
+overweight_walk_k			=	10				;10					;коэффициент влияние перегрузки ноши (умножается на walk_weight_power)
+accel_k					=	1				;3						;коэффициент на бег (умножается walk_power, walk_weight_power)
+sprint_k				=	15000				;6						;коэффициент на "sprint" бег (умножается walk_power, walk_weight_power)
+
+
+; хромота
+limping_health_begin =	0		;порог здоровья меньше которого актер начинает хромать
+limping_health_end   =	0.2		;порог здоровья больше которого актер перестает хромать
+limping_power_begin  =	0.1		;порог силы меньше которого актер начинает хромать
+limping_power_end	 =	0.2		;порог силы больше которого актер перестает хромать
+use_limping_state	 = on
+
+cant_walk_power_begin =	0.00	;порог силы меньше которого актер не может двигаться
+cant_walk_power_end   =	0.10	;порог силы больше которого актер сможет двигаться

@@ -1,0 +1,80 @@
+#!/usr/local/bin/expect
+# -*-C++-*- change.exp -- C++ is actually a lie but it helps
+# <!!----------------------------------------------------------------------> 
+# <!! Copyright (C) 1999 Dietmar Kuehl, Claas Solutions GmbH > 
+# <!!> 
+# <!! Permission to use, copy, modify, distribute and sell this > 
+# <!! software for any purpose is hereby granted without fee, provided > 
+# <!! that the above copyright notice appears in all copies and that > 
+# <!! both that copyright notice and this permission notice appear in > 
+# <!! supporting documentation. Dietmar Kuehl and Claas Solutions make no > 
+# <!! representations about the suitability of this software for any > 
+# <!! purpose. It is provided "as is" without express or implied warranty. > 
+# <!!----------------------------------------------------------------------> 
+
+# Author: Dietmar Kuehl dietmar.kuehl@claas-solutions.de 
+# Title:   
+# Version: $Id: change.exp,v 1.3 1999/07/12 18:57:41 kuehl Exp $ 
+
+# -------------------------------------------------------------------------- 
+
+inline_compile {
+  #include <iostream>
+  #include <vector>
+  #include <cstdlib>
+  #include <algorithm>
+  #include "boost/heap.hpp"
+
+  int main(int ac, char *av[])
+  {
+    int size(ac > 1? atoi(av[1]): 100);
+
+    boost::d_heap<int>                               dheap;
+    std::vector<boost::d_heap<int>::pointer>         daux;
+    boost::fibonacci_heap<int>                       fheap;
+    std::vector<boost::fibonacci_heap<int>::pointer> faux;
+    std::vector<int>                                 ctrl;
+
+    int idx, val;
+    for (int i = 0; i < size; ++i)
+      {
+	val = rand() % (size / 2);
+	daux.push_back(dheap.push(val));
+	faux.push_back(fheap.push(val));
+	ctrl.push_back(val);
+      }
+
+    for (int i = 0; i < 5 * size; ++i)
+      {
+	idx = rand() % size;
+	val = rand() % (size / 2);
+	dheap.change(daux[idx], val);
+	fheap.change(faux[idx], val);
+	ctrl[idx] = val;
+      }
+
+    std::sort(ctrl.begin(), ctrl.end());
+
+    if (dheap.size() != fheap.size() || fheap.size() != ctrl.size())
+      {
+	std::cout << "error: the results have different sizes\n";
+	exit(1);
+      }
+
+    std::cout.setf(std::ios::left, std::ios::adjustfield);
+    for (std::vector<int>::size_type i = 0; i < ctrl.size(); ++i)
+      {
+	if (dheap.top() != fheap.top() || dheap.top() != ctrl[i])
+	  std::cout << "error: the order differs\n";
+	dheap.pop();
+	fheap.pop();
+      }
+
+    std::cout << "OK\n";
+    return 0;
+  }
+}
+
+simple_test "changing priority" "" {
+OK
+}

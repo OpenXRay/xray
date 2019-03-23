@@ -1,0 +1,6 @@
+[map_info]
+name = "Lost Village"
+players = 8-16
+modes = "Deathmatch, TeamdDeathmatch, Artefacthunt"
+short_desc = "ui_map_desc_mp_lost_village_short"
+large_desc = "ui_map_desc_mp_lost_village_large"

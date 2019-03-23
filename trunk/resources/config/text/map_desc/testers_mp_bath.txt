@@ -1,0 +1,6 @@
+[map_info]
+name = "Bath"
+players = 4-8
+modes = "Deathmatch, TeamdDeathmatch"
+short_desc = "ui_map_desc_mp_bath_short"
+large_desc = "ui_map_desc_mp_bath_large"

@@ -1,0 +1,6 @@
+[map_info]
+name = "Garbage"
+players = 8-16
+modes = "Deathmatch, TeamdDeathmatch"
+short_desc = "ui_map_desc_mp_garbage_short"
+large_desc = "ui_map_desc_mp_garbage_large"

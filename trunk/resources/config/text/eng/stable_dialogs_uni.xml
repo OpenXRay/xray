@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="windows-1251" standalone="no" ?>
+<string_table>
+    <string id="dialog_universal_0">
+        <text>Hi!</text>
+    </string>
+    <string id="dialog_universal_01">
+        <text>I got some businesses to you...</text>
+    </string>
+    <string id="dialog_universal_02">
+        <text>What do you want?</text>
+    </string>
+    <string id="dialog_universal_100">
+        <text>Where can I earn some money and get an equipment?</text>
+    </string>
+    <string id="dialog_universal_1000">
+        <text>What news recently do you have?</text>
+    </string>
+    <string id="dialog_universal_1001">
+        <text>Seriy tried to force through block post. Everybody's dead.</text>
+    </string>
+    <string id="dialog_universal_1002">
+        <text>I heard one stalker, returned out of Zone, was robbed and killed by militarists. They took an valuable artifact. They say scientists got shocked.</text>
+    </string>
+    <string id="dialog_universal_101">
+        <text>You can get it by Trader in the cellar. There's no more places. You'd better don't disappoint him. He can make the price too high, so you would have to pick</text>
+    </string>
+    <string id="dialog_universal_102">
+        <text>If you need weapon, equipment or a job apply to a Trader living in the village near the blockpost. You can sell him artifacts at profitable prices. You'd better be \na friend of him, the price depends on his relation to you.</text>
+    </string>
+    <string id="dialog_universal_1202">
+        <text>I've heard about "Duty" formation-they are Zone's sanitars.</text>
+    </string>
+    <string id="dialog_universal_1300">
+        <text>Can you teel me about some things?</text>
+    </string>
+    <string id="dialog_universal_1301">
+        <text>What do you want to know?</text>
+    </string>
+    <string id="dialog_universal_1310">
+        <text>Can you give some advises to a novice?</text>
+    </string>
+    <string id="dialog_universal_1311">
+        <text>I don't really know what can I advise you... I'm not very long time here. The first thing you are to do - to get weapons and equipment.</text>
+    </string>
+    <string id="dialog_universal_13111">
+        <text>I need more information</text>
+    </string>
+    <string id="dialog_universal_13112">
+        <text>Thanks, enough</text>
+    </string>
+    <string id="dialog_universal_1312">
+        <text>Don't have a rest on open countries, beware of anomalies, mutants and bandits, do not attack militarists...and shelter \nduring Emission, otherwise - instant death...</text>
+    </string>
+    <string id="dialog_universal_1320">
+        <text>Tell me about Zone</text>
+    </string>
+    <string id="dialog_universal_1321">
+        <text>I'm a novice to, I don't know... I'm just getting use to it.</text>
+    </string>
+    <string id="dialog_universal_1322">
+        <text>The Zone...it is't a circle 40km in radius, and not even part of the world. It's a new world, with its own laws and oditties.</text>
+    </string>
+    <string id="dialog_universal_1330">
+        <text>And what's about soldiers and militarists?</text>
+    </string>
+    <string id="dialog_universal_1331">
+        <text>There's olanty of soldiers aroud here, you can kill them only in emergency. Remember trader won't be glad by that kind \nof things.</text>
+    </string>
+    <string id="dialog_universal_1332">
+        <text>Soldiers and militarists are everywhere. Don't go to blockpost, they shoot you. Don't forget if you are killing soldiers, \ntrader is not glad.</text>
+    </string>
+    <string id="dialog_universal_1340">
+        <text>Tell about stalkers in detailes.</text>
+    </string>
+    <string id="dialog_universal_1341">
+        <text>I'm novice, I don't know about stalker much.</text>
+    </string>
+    <string id="dialog_universal_1342">
+        <text>Stalker is a human. No, it's rather intellegent creature, which have abilities to understand and accept rules of the Zone. \nWhen you do this way, you're guaranteed relatively serene life.</text>
+    </string>
+    <string id="dialog_universal_1350">
+        <text>Tell me about yourself.</text>
+    </string>
+    <string id="dialog_universal_1351">
+        <text>There's any remarkable thing in my story. I got an information about Zone from my friend. I wanted to earn some \nmoney, so here I am.</text>
+    </string>
+    <string id="dialog_universal_1352">
+        <text>I came here to find myself, all the more I got a plus- I got nothing to lose, there's nobody awating for me at home.</text>
+    </string>
+    <string id="dialog_universal_1360">
+        <text>Have you heard about formations in the Zone?</text>
+    </string>
+    <string id="dialog_universal_1361">
+        <text>I'm here not so long, no I've not.Though it could be.</text>
+    </string>
+    <string id="dialog_universal_1362">
+        <text>I've heard about "Duty" formation, they're Zone's orderlies.</text>
+    </string>
+    <string id="dialog_universal_1370">
+        <text>What do you know about anomalies?</text>
+    </string>
+    <string id="dialog_universal_1371">
+        <text>It's fatal areas in the Zone. You should keep away from it.</text>
+    </string>
+    <string id="dialog_universal_1372">
+        <text>Anomalies it's wounds on Mother's Earth boby. It is almoust impossible to get out of it, so beware of it.</text>
+    </string>
+    <string id="dialog_universal_1381">
+        <text>text in default</text>
+    </string>
+    <string id="dialog_universal_1382">
+        <text>text in default</text>
+    </string>
+    <string id="dialog_universal_1500">
+        <text>I gotta go</text>
+    </string>
+    <string id="dialog_universal_2000">
+        <text>I'm sorry, I gotta go</text>
+    </string>
+    <string id="dialog_universal_400">
+        <text>Let's trade</text>
+    </string>
+    <string id="dialog_universal_401">
+        <text>I just wanted to offer you the same!</text>
+    </string>
+    <string id="dialog_universal_4011">
+        <text>I want one more thing.</text>
+    </string>
+    <string id="dialog_universal_4012">
+        <text>Thanks, that's all.</text>
+    </string>
+    <string id="dialog_universal_402">
+        <text>No problem</text>
+    </string>
+    <string id="dialog_universal_700">
+        <text>What are stalkers talking about?</text>
+    </string>
+    <string id="dialog_universal_701">
+        <text>Many of them consider Zone to be a living organism, which exists by it's own rules and laws. Hence, a men, who got into \nit is a alien, who doesn't subordinate to it's rules and laws, and Zone tries to get read of him by all means. Naturally, it \nconcern not only stalkers but militarists to...</text>
+    </string>
+    <string id="dialog_universal_702">
+        <text>Stalkers got a saying: the weak is quick dead, the strong is got mad. It will be enough fingers on one hand to count \nheroes who got the center and came back.</text>
+    </string>
+    <string id="dialog_universal_800">
+        <text>What is the place? I don't remember anything...</text>
+    </string>
+    <string id="dialog_universal_801">
+        <text>It's essentially the very start place for novices, who go into Zone for the first time. It's dangerous at night, though those \nmonsters out of the center don't appear here. By the way, be careful, there's a blockpost not far from it.</text>
+    </string>
+    <string id="dialog_universal_802">
+        <text>The lobby of Zone is blockpost. Mostlu you can see ther packs of blind dogs, sometimes mutants out of waste grounds. \nBe careful at night. If you go north way you will reach waste grounds.</text>
+    </string>
+</string_table>

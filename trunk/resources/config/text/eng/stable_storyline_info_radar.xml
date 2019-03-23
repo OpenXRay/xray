@@ -1,0 +1,21 @@
+	<string id="bun_code">
+		<text>A number haunts me, as if it's chasing me from a previous life. I knew it then, when I didn't believe. I remember it now - 342089. It's the code to a door but I do not remember the way to the door.</text>
+	</string>
+	<string id="bun_monolith_pda">
+		<text>Monolith soldier's PDA</text>
+	</string>
+	<string id="rad_code_door_info">
+		<text>The dead scientist had a map with a door marked on it. Code 1287975</text>
+	</string>
+	<string id="rad_code_door_info_name">
+		<text>Code door</text>
+	</string>
+	<string id="rad_get_to_aes_desc">
+		<text>Бармен: "Тут все просто с ума посходили, когда узнали! Все кто мог тут же ринулись пробиваться к центру зоны, одиночки, Свобода, Долг, даже наемники. Кто первый доберется тот и получит все! Исполнитель желаний, клондайк артефактов и, черт его знает, что еще. Поспеши, если Исполнитель действительно в саркофаге станции, то тот кто первый доберется, того желание и исполнится. Сейчас как раз перед Припятью собирается отряд ветеранов. Если поспешишь, пойдешь с ними."</text>
+	</string>
+	<string id="rad_sleep_info">
+		<text>I turned off the Burner. For some reason, I lost conciousness just as I did it. Then, I had a dream: I saw again the massive Chernobyl power plant and the sarcophagus. Then a flash. The shining Monolith inside the sarcophagus. I understand that it is the Wish-Granting Machine. A stalker, exhausted and in rags, reaches feebly out to it...a bright flash and I see a fragment of the first dream... A man stands with his back to me and keeps shooting. Someone shouts, "Hawkeye!". The man shudders, freezes for a moment and then starts to turn slowly...but the pictures slide past, as if a film was played backwards, and I see how he uses his weapon to force the rats back into the station... I realize that I was there. I must go to the Monolith.</text>
+	</string>
+	<string id="rad_sleep_info1">
+		<text>The Burner is done with</text>
+	</string>

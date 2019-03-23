@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+<string_table>
+	<string id="artefact_af_blood">
+		<text>ARTIFACT</text>
+	</string>
+	<string id="artefact_af_cristall_flower">
+		<text>ARTIFACT</text>
+	</string>
+	<string id="artefact_af_gold_fish">
+		<text>ARTIFACT</text>
+	</string>
+	<string id="artefact_af_gravi">
+		<text>ARTIFACT</text>
+	</string>
+	<string id="artefact_af_medusa">
+		<text>ARTIFACT</text>
+	</string>
+	<string id="artefact_af_mincer_meat">
+		<text>ARTIFACT</text>
+	</string>
+	<string id="artefact_af_night_star">
+		<text>ARTIFACT</text>
+	</string>
+	<string id="artefact_af_soul">
+		<text>ARTIFACT</text>
+	</string>
+	<string id="artefact_af_vyvert">
+		<text>ARTIFACT</text>
+	</string>
+</string_table>

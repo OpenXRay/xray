@@ -1,0 +1,6 @@
+[map_info]
+name = "Rostok"
+players = 8-16
+modes = "Deathmatch, TeamdDeathmatch, Artefacthunt"
+short_desc = "ui_map_desc_mp_rostok_short"
+large_desc = "ui_map_desc_mp_rostok_large"

@@ -1,0 +1,202 @@
+# <!!-*-C++-*- file: lib/libtest.exp --->
+# <!!-------------------------------------------------------------------------->
+# <!! Copyright (C) 1996 Dietmar Kuehl >
+# <!!   Universitaet Konstanz, Lehrstuhl fuer praktische Informatik I >
+# <!!>
+# <!! This file is free software; you can redistribute it and/or modify >
+# <!! it under the terms of the GNU General Public License as published by >
+# <!! the Free Software Foundation; either version 2 of the License, or >
+# <!! (at your option) any later version. >
+# <!!>
+# <!! This file is distributed in the hope that it will be useful, >
+# <!! but WITHOUT ANY WARRANTY; without even the implied warranty of >
+# <!! MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the >
+# <!! GNU General Public License for more details. >
+# <!!-------------------------------------------------------------------------->
+
+# Author: Dietmar Kühl dietmar.kuehl@uni-konstanz.de http://www.informatik.uni-konstanz.de/~kuehl
+# Title:  Expect procedures used to check libraries...
+
+#-------------------------------------------------------------------------------
+# libtest_prog indicates whether there exists a valid test program:
+#   0 there is no valid test program
+#   1 there is a valid test program
+
+set libtest_prog 0
+
+#-------------------------------------------------------------------------------
+# libtest_cleanup is expected to be called in the $(tool)_exit procedure.
+
+proc libtest_cleanup {} {
+  set libtest_prog 1
+}
+
+#-------------------------------------------------------------------------------
+# simple_compile takes a single source file and attempts to convert it
+# to a program. To do so $(tool)_start is called. If it fails to
+# compile or link the file, a failure is assumed (future attempts to
+# invoke the created program result in unresolved tests). Otherwise a
+# test is considered to be passed. If the test passes, i.e. the file
+# could be compiled and linked, 0 is returned.  1 is returned otherwise
+
+proc simple_compile {file} {
+  global libtest_prog
+  global subdir
+  global tool
+
+  #regsub "/" "$subdir/$file" "" cfile
+  set cfile "$subdir/$file"
+
+  set rc 1
+  switch [[set tool]_start $cfile "" "" ""] {
+    0 {
+	set libtest_prog 1
+	pass "compiles $cfile"
+	set rc 0
+      }
+    1 {
+	set libtest_prog 0
+	fail "error while compiling $cfile"
+      }
+    2 {
+	set libtest_prog 0
+	fail "error while linking $cfile"
+      }
+    default {
+	set libtest_prog 0
+	unresolved "simple_compile $cfile"
+      }
+  }
+  return $rc
+}
+
+#-------------------------------------------------------------------------------
+# simple_fail_compile takes a single source file and attempts to
+# convert it to a program. To do so $(tool)_start is called. This
+# procedure expects that the compile fails! If the compile succeeds, it
+# is considered to be a failure of the test. This is useful to check
+# that an illegal construct indeed creates a compile time error!
+# The function returns 1 on success (i.e. if the code could not be
+# compiled) and 0 on failure (i.e. if the code could be compiled) or on
+# an unexpect result from the compiler.
+
+proc simple_fail_compile {file} {
+  global libtest_prog
+  global subdir
+  global tool
+
+  #regsub "/" "$subdir/$file" "" cfile
+  set cfile "$subdir/$file"
+
+  switch [[set tool]_start $cfile "" "" ""] {
+    0 {
+	fail "compiles $cfile but should not!"
+	set rc 1
+      }
+    1 {
+	pass "error while compiling $cfile (is correct)!"
+	set rc 0
+      }
+    default {
+	unresolved "simple_compile $cfile"
+	set rc 0
+      }
+  }
+  return $rc
+}
+
+#-------------------------------------------------------------------------------
+# inline_compile takes the contents of a source file as argument,
+# stores this in a file and calls simple_compile to attempt to create an
+# executable. This procedure is present to be able store the code for the
+# tests in the same file as the tests.
+
+proc inline_compile {code} {
+  set tmpfn lt[pid].cc
+  set TMPFD [open $tmpfn w]
+
+  puts $TMPFD $code
+  close $TMPFD
+  set rc [simple_compile ../$tmpfn]
+  eval "exec rm -f $tmpfn dummy" # this should actually be part of the exit procedure...
+  return $rc
+}
+
+#-------------------------------------------------------------------------------
+# inline_fail_compile takes the contents of a source file as argument,
+# stores this in a file and calls simple_fail_compile to attempt to
+# create an executable. This procedure is present to be able store the
+# code for the tests in the same file as the tests.
+
+proc inline_fail_compile {code} {
+  set tmpfn lt[pid].cc
+  set TMPFD [open $tmpfn w]
+
+  puts $TMPFD $code
+  close $TMPFD
+  set rc [simple_fail_compile ../$tmpfn]
+  eval "exec rm -f $tmpfn dummy" # this should actually be part of the exit procedure...
+  return $rc
+}
+
+#-------------------------------------------------------------------------------
+# simple_test takes three arguments and runs the program with the
+# values determined from the: The first argument is just a message used
+# in the 'pass' or 'fail' message.  The second argument is a list of
+# arguments passed to the program and the third argument is the
+# expected output. A pass is assumed if the program generates exactly
+# the output (note that one leading and one trailing newline is
+# stripped from the third argument if present) otherwise the test
+# failed.  If it were impossible the compile and link the program, the
+# result of the test is assumed to be unresolved.
+
+proc simple_test {message arguments output} {
+  global tool
+  global libtest_prog
+  global exec_output
+
+  if {$libtest_prog} {
+    regsub "^\n" $output "" output
+    regsub "\n$" $output "" output
+
+    [set tool]_load $arguments
+    if {$exec_output == $output} {
+      pass $message
+    } else {
+      fail $message
+    }
+
+    # send_user "\n$exec_output\n"
+  } else {
+    unresolved "failed to create testprogram"
+  }
+}
+
+#-------------------------------------------------------------------------------
+
+proc replace_test {message arguments replist output} {
+  global tool
+  global libtest_prog
+  global exec_output
+
+  if {$libtest_prog} {
+    regsub "^\n" $output "" output
+    regsub "\n$" $output "" output
+
+    [set tool]_load $arguments
+    foreach rep $replist {
+      regexp -- [lindex $rep 0] $exec_output dummy [lindex $rep 1]
+    }
+    regsub -all "\n" $output "###" output
+    eval set rep_output \"$output\"
+    regsub -all "###" $rep_output "\n" rep_output
+    # send_user "\n$message\n$exec_output\n"
+    if {$exec_output == $rep_output} {
+      pass $message
+    } else {
+      fail $message
+    }
+  } else {
+    unresolved "failed to create testprogram"
+  }
+}

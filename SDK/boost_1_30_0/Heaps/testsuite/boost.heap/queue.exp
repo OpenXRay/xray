@@ -1,0 +1,63 @@
+#!/usr/local/bin/expect
+# -*-C++-*- boost.heap/queue.exp -- C++ is actually a lie but it helps
+# <!!----------------------------------------------------------------------> 
+# <!! Copyright (C) 1999 Dietmar Kuehl, Claas Solutions GmbH > 
+# <!!> 
+# <!! Permission to use, copy, modify, distribute and sell this > 
+# <!! software for any purpose is hereby granted without fee, provided > 
+# <!! that the above copyright notice appears in all copies and that > 
+# <!! both that copyright notice and this permission notice appear in > 
+# <!! supporting documentation. Dietmar Kuehl and Claas Solutions make no > 
+# <!! representations about the suitability of this software for any > 
+# <!! purpose. It is provided "as is" without express or implied warranty. > 
+# <!!----------------------------------------------------------------------> 
+
+# Author: Dietmar Kuehl dietmar.kuehl@claas-solutions.de 
+# Title:  Testing completeness of the queue interface
+# Version: $Id: queue.exp,v 1.2 1999/07/12 18:57:42 kuehl Exp $ 
+
+# -------------------------------------------------------------------------- 
+
+inline_compile {
+  #include "boost/queue.hpp"
+  #include <iostream>
+
+  template <class T> void test_type(T&) {}
+  template <class T> void same_type(T*, T*) {}
+  template <class T1, class T2> void equal_type() { same_type((T1*)0, (T2*)0); }
+
+  int main()
+  {
+    std::cout << "NOTE: This program is not supposed to run!\n";
+    std::cout << "      It just tests that everything mentioned in the docs is there!\n";
+    std::cout << "      Actually it will almost certainly crash (eg. seg.fault)!\n";
+
+    equal_type<boost::queue<int>, boost::queue<int, std::deque<int> > >();
+
+    boost::queue<int> q;
+    boost::queue<int> const& cq = boost::queue<int>(std::deque<int>());
+
+    test_type<bool const>(cq == cq);
+    test_type<bool const>(cq != cq);
+    test_type<bool const>(cq <= cq);
+    test_type<bool const>(cq >= cq);
+    test_type<bool const>(cq < cq);
+    test_type<bool const>(cq > cq);
+
+    q.push(17);
+    q.pop();
+    test_type<int>(q.front());
+    test_type<int>(q.top());
+    test_type<int>(q.back());
+    test_type<boost::queue<int>::iterator const>(q.begin());
+    test_type<boost::queue<int>::iterator const>(q.end());
+
+    test_type<bool const>(cq.empty());
+    test_type<boost::queue<int>::size_type const>(cq.size());
+    test_type<int const>(cq.front());
+    test_type<int const>(cq.top());
+    test_type<int const>(cq.back());
+    test_type<boost::queue<int>::const_iterator const>(cq.begin());
+    test_type<boost::queue<int>::const_iterator const>(cq.end());
+  }
+}

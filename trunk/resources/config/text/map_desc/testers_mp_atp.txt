@@ -1,0 +1,6 @@
+[map_info]
+name = "ATP"
+players = 4-8
+modes = "Deathmatch, TeamdDeathmatch"
+short_desc = "ui_map_desc_mp_atp_short"
+large_desc = "ui_map_desc_mp_atp_large"

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<window>
+	<back_video x="0" y="0" width="1024" height="768" stretch="1">
+		<_texture>ui\credits_back_512_v10</_texture>
+		<texture>ui\1_hyuv_sq</texture>
+	</back_video>
+
+	<background x="0" y="0" width="1024" height="768">
+		<texture>ui\ui_static_mm_back_04</texture>
+	</background>
+	
+	<form x="415" y="168" width="560" height="460">
+		<texture>ui\ui_options_menu_static</texture>
+		<texture_offset x="-29" y="-19"/>
+		
+		<caption x="36" y="-9" width="500" height="25" complex_mode="0">
+			<text font="letterica25" r="184" g="168" b="131">ui_mm_load_game</text>
+		</caption>
+		
+		<picture x="76" y="52" width="128" height="128" clipper="1">
+			<texture>ui\ui_noise</texture>
+		</picture>
+		
+		<file_info	x="18" y="36" width="512" height="148">
+			<texture>ui\ui_static_loadgameinfo</texture>
+		</file_info>
+		
+		<file_caption x="270" y="90" width="512" height="20">
+			<text font="letterica18" r="238" g="155" b="23"/>
+		</file_caption>
+		
+		<file_data x="270" y="110" width="512" height="50">
+			<text font="letterica18" r="216" g="186" b="140"/>
+		</file_data>
+		
+		<list_frame x="36" y="202" width="449" height="200">
+			<texture>ui_frame_01</texture>
+		</list_frame>
+		
+		<list x="46" y="212" width="429" height="180" item_height="20">
+			<font font="letterica16" r="216" g="186" b="140" />
+		</list>
+				
+		<btn_load x="36" y="408" width="147" height="60">
+			<texture>ui\ui_btn_triple_left</texture>
+			<text font="letterica18">ui_mm_load</text>
+			<text_color>
+				<e r="216" g="186" b="140"/>
+				<t r="255" g="232" b="208"/>
+				<h r="238" g="155" b="23"/>
+			</text_color>
+		</btn_load>
+		
+		<btn_delete x="187" y="408" width="147" height="60">
+			<texture>ui\ui_btn_triple_center</texture>
+			<text font="letterica18">ui_mm_delete</text>
+			<text_color>
+				<e r="216" g="186" b="140"/>
+				<t r="255" g="232" b="208"/>
+				<h r="238" g="155" b="23"/>
+			</text_color>
+		</btn_delete>
+		
+		<btn_cancel x="338" y="408" width="147" height="60">
+			<texture>ui\ui_btn_triple_right</texture>			
+			<text font="letterica18">ui_mm_cancel</text>
+			<text_color>
+				<e r="216" g="186" b="140"/>
+				<t r="255" g="232" b="208"/>
+				<h r="238" g="155" b="23"/>
+			</text_color>
+		</btn_cancel>		
+	</form>
+</window>

@@ -1,0 +1,62 @@
+#!/usr/local/bin/expect
+# -*-C++-*- boost.heap/heap.mfd -- C++ is actually a lie but it helps
+# <!!----------------------------------------------------------------------> 
+# <!! Copyright (C) 1999 Dietmar Kuehl, Claas Solutions GmbH > 
+# <!!> 
+# <!! Permission to use, copy, modify, distribute and sell this > 
+# <!! software for any purpose is hereby granted without fee, provided > 
+# <!! that the above copyright notice appears in all copies and that > 
+# <!! both that copyright notice and this permission notice appear in > 
+# <!! supporting documentation. Dietmar Kuehl and Claas Solutions make no > 
+# <!! representations about the suitability of this software for any > 
+# <!! purpose. It is provided "as is" without express or implied warranty. > 
+# <!!----------------------------------------------------------------------> 
+
+# Author: Dietmar Kuehl dietmar.kuehl@claas-solutions.de 
+# Title:  Additional members of all heaps, ie. 'change_min()'
+# Version: $Id: heap.exp,v 1.3 1999/07/12 18:57:41 kuehl Exp $ 
+
+# -------------------------------------------------------------------------- 
+
+inline_compile {
+  #include "boost/heap.hpp"
+
+  template <class Heap>
+  void test_abridged_heap()
+  {
+    Heap h;
+    h.push(typename Heap::value_type());
+    h.change_top(typename Heap::value_type());
+  }
+
+  template <class Heap>
+  void test_complete_heap()
+  {
+    Heap h;
+    typename Heap::pointer ptr = h.push(typename Heap::value_type());
+    h.change(ptr, typename Heap::value_type());
+    h.decrease(ptr, typename Heap::value_type());
+    h.increase(ptr, typename Heap::value_type());
+    h.remove(ptr);
+  }
+
+  int main()
+  {
+    test_abridged_heap<boost::priority_queue<int> >();
+    test_abridged_heap<boost::d_heap<int> >();
+    test_abridged_heap<boost::fibonacci_heap<int> >();
+    test_abridged_heap<boost::lazy_fibonacci_heap<int> >();
+    test_abridged_heap<boost::pairing_heap<int> >();
+    test_abridged_heap<boost::splay_heap<int> >();
+    //-dk:TODO test_abridged_heap<boost::radix_heap<int> >();
+
+    test_complete_heap<boost::d_heap<int> >();
+    test_complete_heap<boost::fibonacci_heap<int> >();
+    test_complete_heap<boost::lazy_fibonacci_heap<int> >();
+    test_complete_heap<boost::pairing_heap<int> >();
+    test_complete_heap<boost::splay_heap<int> >();
+    //-dk:TODO test_complete_heap<boost::radix_heap<int> >();
+
+    return 0;
+  }
+}

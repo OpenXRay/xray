@@ -1,0 +1,18 @@
+[logic]
+active = ph_idle@wait
+particle = anomaly2\monolith_golo
+
+[ph_idle@wait]
+on_info = {=counter_greater(mon_destroy_generator:1)} ph_sound@1
+
+[ph_sound@1]
+snd = mon_monolith_damaged
+on_info = {=counter_greater(mon_destroy_generator:3)} ph_sound@2
+
+[ph_sound@2]
+snd = mon_monolith_heavy_damaged
+on_info = {=counter_greater(mon_destroy_generator:5)} ph_sound@3 %=destroy_monolith_generator%
+
+[ph_sound@3]
+snd = mon_monolith_alarm
+on_signal = sound_end| nil %+sar_monolith_destroy +sar_monolith_off =play_snd(characters_voice\scenario\osoznanie\teleport_osoznanie) =run_postprocess(monolith_off:2507:false)%

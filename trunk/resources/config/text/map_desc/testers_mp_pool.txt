@@ -1,0 +1,6 @@
+[map_info]
+name = "POOL"
+players = 32
+modes = "Deathmatch, TeamdDeathmatch, Artefacthunt"
+short_desc = "there is must be iformation about TESTERS_MP_POOL"
+large_desc = "there is must be large iformation about TESTERS_MP_POOL"

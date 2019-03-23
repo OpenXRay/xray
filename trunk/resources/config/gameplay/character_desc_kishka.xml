@@ -1,0 +1,66 @@
+<?xml version='1.0' encoding="windows-1251"?>
+
+<xml>
+
+<specific_character id="ds_soldier_novice" team_default = "1">
+		<name>GENERATE_NAME_private</name>
+		<icon x="12" y="2"></icon>
+		<map_icon x="1" y="2"></map_icon>
+		<bio>ds_soldier_regular_bio</bio>
+
+		<class>ds_Soldier_novice</class>
+		<community>military</community> <terrain_sect>stalker_military_terrain</terrain_sect>
+		
+		<rank>300</rank>
+		<reputation>0</reputation>
+
+		<visual>actors\soldier\soldier_bandana</visual>		
+		<snd_config>characters_voice\human_01\military\</snd_config>
+		<supplies>
+			[spawn] \n
+			wpn_fort \n
+			ammo_9x18_fmj = 1 \n
+			wpn_ak74u \n
+			ammo_5.45x39_fmj = 1 \n
+			device_torch \n
+#include "gameplay\character_drugs.xml"
+#include "gameplay\character_food.xml"
+		</supplies>	
+					
+		<start_dialog>hello_dialog</start_dialog>
+		
+	</specific_character>
+	
+	<specific_character id="ds_soldier_regular" team_default = "1">
+		<name>GENERATE_NAME_sergeant</name>
+		<icon x="12" y="2"></icon>
+		<map_icon x="1" y="2"></map_icon>
+		<bio>ds_sergant_regular_bio</bio>
+
+		<class>ds_Soldier_regular</class>
+		<community>military</community> <terrain_sect>stalker_military_terrain</terrain_sect>
+		
+		<rank>300</rank>
+		<reputation>0</reputation>
+
+		<visual>actors\soldier\soldier_bandana_5</visual>		
+		<snd_config>characters_voice\human_01\ military\</snd_config>
+		<supplies>
+			[spawn] \n
+			wpn_fort \n
+			ammo_9x18_fmj = 1 \n
+			wpn_ak74 \n
+			ammo_5.45x39_fmj = 1 \n
+			device_torch \n
+#include "gameplay\character_drugs.xml"
+#include "gameplay\character_food.xml"
+		</supplies>
+					
+		<start_dialog>hello_dialog</start_dialog>
+		
+	</specific_character>
+	
+	
+	
+	
+</xml>

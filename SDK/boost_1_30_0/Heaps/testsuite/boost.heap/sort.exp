@@ -1,0 +1,97 @@
+#!/usr/local/bin/expect
+# -*-C++-*- sort.exp -- C++ is actually a lie but it helps
+# <!!----------------------------------------------------------------------> 
+# <!! Copyright (C) 1999 Dietmar Kuehl, Claas Solutions GmbH > 
+# <!!> 
+# <!! Permission to use, copy, modify, distribute and sell this > 
+# <!! software for any purpose is hereby granted without fee, provided > 
+# <!! that the above copyright notice appears in all copies and that > 
+# <!! both that copyright notice and this permission notice appear in > 
+# <!! supporting documentation. Dietmar Kuehl and Claas Solutions make no > 
+# <!! representations about the suitability of this software for any > 
+# <!! purpose. It is provided "as is" without express or implied warranty. > 
+# <!!----------------------------------------------------------------------> 
+
+# Author: Dietmar Kuehl dietmar.kuehl@claas-solutions.de 
+# Title:  Use the heaps to sort a bunch of random values.
+# Version: $Id: sort.exp,v 1.2 1999/07/12 18:57:42 kuehl Exp $ 
+
+# -------------------------------------------------------------------------- 
+
+inline_compile {
+  #include <iostream>
+  #include <vector>
+  #include <algorithm>
+  #include <cstdlib>
+  #include "boost/heap.hpp"
+
+  template <class Heap>
+  std::vector<int> test_sort(std::vector<int> const& in)
+  {
+    Heap heap;
+
+    for (std::vector<int>::const_iterator it = in.begin(); it != in.end(); ++it)
+      heap.push(*it);
+
+    std::vector<int> rc;
+
+    while (!heap.empty())
+      {
+	rc.push_back(heap.top());
+	heap.pop();
+      }
+
+    if (rc.size() != in.size())
+      {
+	std::cout << "the number of elements changed!\n";
+	exit(1);
+      }
+
+    return rc;
+  }
+
+  int main(int ac, char* av[])
+  {
+    std::vector<int> in;
+
+    unsigned int size = ac > 1? atoi(av[1]): 1000;
+    for (unsigned int i = 0; i < size; ++i)
+      in.push_back(rand());
+
+    std::vector<int> const &out1 = test_sort<boost::d_heap<int> >(in);
+    std::vector<int> const &out2 = test_sort<boost::fibonacci_heap<int> >(in);
+    std::vector<int> const &out3 = test_sort<boost::radix_heap<int> >(in);
+    std::vector<int> const &out4 = test_sort<boost::lazy_fibonacci_heap<int> >(in);
+    std::vector<int> const &out5 = test_sort<boost::pairing_heap<int> >(in);
+    std::vector<int> const &out6 = test_sort<boost::splay_heap<int> >(in);
+    std::vector<int> const &out7 = test_sort<boost::priority_queue<int> >(in);
+
+    std::sort(in.begin(), in.end());
+
+    for (unsigned int i = 0; i < in.size(); ++i)
+      {
+	if (in[i] != out1[i])
+	  std::cout << "difference for d_heap " << i << ": " << in[i] << " vs. " << out1[i] << "\n";
+	if (in[i] != out2[i])
+	  std::cout << "difference for fibonacci_heap " << i << ": " << in[i] << " vs. " << out2[i] << "\n";
+	if (in[i] != out3[i])
+	  std::cout << "difference for radix_heap " << i << ": " << in[i] << " vs. " << out3[i] << "\n";
+	if (in[i] != out4[i])
+	  std::cout << "difference for lazy_fibonacci_heap " << i << ": " << in[i] << " vs. " << out4[i] << "\n";
+	if (in[i] != out5[i])
+	  std::cout << "difference for pairing_heap " << i << ": " << in[i] << " vs. " << out5[i] << "\n";
+	if (in[i] != out6[i])
+	  std::cout << "difference for splay_heap " << i << ": " << in[i] << " vs. " << out6[i] << "\n";
+	if (in[i] != out7[i])
+	  std::cout << "difference for priority_queue " << i << ": " << in[i] << " vs. " << out7[i] << "\n";
+      }
+    
+    std::cout << "OK\n";
+
+    return 0;
+  }
+}
+
+simple_test "heap sort" "" {
+OK
+}

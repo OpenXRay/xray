@@ -1,0 +1,12 @@
+[logic]
+active = ph_idle@enable
+
+
+[ph_idle@disable]
+on_info = {=treasure_exist} ph_idle@enable
+
+
+[ph_idle@enable]
+nonscript_usable = true
+tips = st_search_treasure
+on_info = {!treasure_exist} ph_idle@disable

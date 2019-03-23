@@ -1,0 +1,12 @@
+function have_kruglov_flash(first_speaker, second_speaker)
+  	return first_speaker:object("kruglov_flash") ~= nil
+end
+function give_kruglov_flash(first_speaker, second_speaker)
+	dialogs.relocate_item_section(second_speaker, "kruglov_flash", "out")
+end
+function give_ecolog_outfit(first_speaker, second_speaker)
+	if not has_alife_info("yan_ecolog_outfit_given") then
+		dialogs.relocate_item_section(second_speaker, "ecolog_outfit", "in")
+		db.actor:give_info_portion("yan_ecolog_outfit_given")
+	end
+end

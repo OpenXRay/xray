@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+<string_table>
+	<string id="new_escape_bridge">
+		<text>Guys, the military have set up a patrol under the destroyed bridge by the outpost again. I think they've got a sniper there too… but I couldn't see where - had to get out of there fast…</text>
+	</string>
+	<string id="news_agroprom_box">
+		<text>I overheard some soldiers on patrol saying that they keep all their loot on the second floor of the Institute. If there's anyone willing to risk it - go ahead and try to get there.</text>
+	</string>
+	<string id="news_agroprom_mili">
+		<text>Be careful. The military seem to have settled here for good. Their base is in the Institute. I saw several dozen men and a sniper on the roof.</text>
+	</string>
+	<string id="news_escape_artefact">
+		<text>Dear stalkers… I urgently require a Night Star… Will pay well… I heard there's one at the outpost from the last blowout…</text>
+	</string>
+	<string id="news_escape_bandits">
+		<text>Attention all… Bandits have set up a guard post at the factory again. They're taking loot from stalkers… If there are any experienced guys around there, go scare them off, please… I'll be make to reward you.</text>
+	</string>
+	<string id="news_escape_blockpost_attack">
+		<text>Attention all… Brothers, don't go to the checkpoint… Some idiots attacked a patrol… basically it's pretty hot there right now… They're bound to send out a punitive unit.</text>
+	</string>
+	<string id="news_escape_blockpost_case">
+		<text>One of the Barman's couriers got taken at the checkpoint recently with a lot of loot… The stuff, a crate of artifacts, is kept by the commander somewhere… If anyone's bored of life - try your luck.</text>
+	</string>
+	<string id="news_escape_dogs">
+		<text>I saw a group of dogs, 20 or 30 of them, to the East of the bridge… Make up your own conclusions…</text>
+	</string>
+	<string id="news_escape_electra">
+		<text>Attention all. I saw a lot of Electras to the North of the bridge about 100 meters from the abandoned APC… If you use this info, you owe me a beer or three.</text>
+	</string>
+	<string id="news_garbage_dogs">
+		<text>I am at the Dump and there is a shitstorm of blind dogs here… I think new hordes of them have come from the center, be careful.</text>
+	</string>
+	<string id="news_garbage_dolg">
+		<text>I think I just saw some Duty fighters at the Dump. I wonder who they're after…</text>
+	</string>
+	<string id="news_garbage_dolina">
+		<text>Stay away from the Dark Valley - whole gangs of zombies are crawling out of there… Save your ammo too. The Valley should have been cleaned up a long time ago…what are Duty playing at?</text>
+	</string>
+	<string id="news_garbage_fedya">
+		<text>Black Fedya got shot in the garages… I've got a feeling the bandits are back.</text>
+	</string>
+	<string id="news_garbage_garage">
+		<text>There are three guys camping in the garages… Everyone be careful - looks like the bastards are back to their old ways.</text>
+	</string>
+	<string id="news_garbage_gunslinger">
+		<text>Hawkeye is back! I just heard it from people who know… Back from the center! Then it's possible, it's possible! Soon we'll make a massive push for the center and we'll see who comes out on top…</text>
+	</string>
+	<string id="news_garbage_herovo">
+		<text>…guys, I'm in a bad way. If there's anyone around the rusty lake, help me out, I'll pay… Gonna try to get out myself…</text>
+	</string>
+	<string id="news_garbage_marked">
+		<text>…Vasya says another marked guy appeared, just left the Trader. You know what to do…</text>
+	</string>
+</string_table>
