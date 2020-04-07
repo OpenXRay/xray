@@ -1,0 +1,301 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="core">
+      <UniqueIdentifier>{ff3008d6-78ca-429a-bd42-b7c27da7757d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="luabind">
+      <UniqueIdentifier>{b776433e-1b89-49f5-9f74-92e44c2c64b0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="etc">
+      <UniqueIdentifier>{167a5866-bd27-4cc3-b5cb-295447027aa6}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\lapi.c">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\lauxlib.c">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\lbaselib.c">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\lcoco.c">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\lcocolib.c">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\lcode.c">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ldblib.c">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ldebug.c">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ldo.c">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ldump.c">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\lfunc.c">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\lgc.c">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\linit.c">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\liolib.c">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ljit_backend.c">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ljit_core.c">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ljit_dasm.c">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ljit_mem.c">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ljitlib.c">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\llex.c">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\lmathlib.c">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\lmem.c">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\loadlib.c">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\lobject.c">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\lopcodes.c">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\loslib.c">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\lparser.c">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\lstate.c">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\lstring.c">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\lstrlib.c">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ltable.c">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ltablib.c">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ltm.c">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\lundump.c">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\lvm.c">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\lzio.c">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="luabind\class.cpp">
+      <Filter>luabind</Filter>
+    </ClCompile>
+    <ClCompile Include="luabind\class_info.cpp">
+      <Filter>luabind</Filter>
+    </ClCompile>
+    <ClCompile Include="luabind\class_registry.cpp">
+      <Filter>luabind</Filter>
+    </ClCompile>
+    <ClCompile Include="luabind\class_rep.cpp">
+      <Filter>luabind</Filter>
+    </ClCompile>
+    <ClCompile Include="luabind\create_class.cpp">
+      <Filter>luabind</Filter>
+    </ClCompile>
+    <ClCompile Include="luabind\error.cpp">
+      <Filter>luabind</Filter>
+    </ClCompile>
+    <ClCompile Include="luabind\find_best_match.cpp">
+      <Filter>luabind</Filter>
+    </ClCompile>
+    <ClCompile Include="luabind\function.cpp">
+      <Filter>luabind</Filter>
+    </ClCompile>
+    <ClCompile Include="luabind\implicit_cast.cpp">
+      <Filter>luabind</Filter>
+    </ClCompile>
+    <ClCompile Include="luabind\link_compatibility.cpp">
+      <Filter>luabind</Filter>
+    </ClCompile>
+    <ClCompile Include="luabind\object.cpp">
+      <Filter>luabind</Filter>
+    </ClCompile>
+    <ClCompile Include="luabind\object_rep.cpp">
+      <Filter>luabind</Filter>
+    </ClCompile>
+    <ClCompile Include="luabind\open.cpp">
+      <Filter>luabind</Filter>
+    </ClCompile>
+    <ClCompile Include="luabind\pcall.cpp">
+      <Filter>luabind</Filter>
+    </ClCompile>
+    <ClCompile Include="luabind\ref.cpp">
+      <Filter>luabind</Filter>
+    </ClCompile>
+    <ClCompile Include="luabind\scope.cpp">
+      <Filter>luabind</Filter>
+    </ClCompile>
+    <ClCompile Include="luabind\stack_content_by_name.cpp">
+      <Filter>luabind</Filter>
+    </ClCompile>
+    <ClCompile Include="luabind\weak_ref.cpp">
+      <Filter>luabind</Filter>
+    </ClCompile>
+    <ClCompile Include="luabind\wrapper_base.cpp">
+      <Filter>luabind</Filter>
+    </ClCompile>
+    <ClCompile Include="StdAfx.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\lapi.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="src\lauxlib.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="src\lcoco.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="src\lcode.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ldebug.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ldo.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="src\lfunc.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="src\lgc.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ljit.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ljit_dasm.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ljit_hints.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ljit_x86.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="src\llex.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="src\llimits.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="src\lmem.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="src\lobject.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="src\lopcodes.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="src\lparser.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="src\lstate.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="src\lstring.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ltable.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ltm.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="src\lua.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="src\luaconf.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="src\luajit.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="src\lualib.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="src\lundump.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="src\lvm.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="src\lzio.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="dynasm\dasm_proto.h">
+      <Filter>etc</Filter>
+    </ClInclude>
+    <ClInclude Include="dynasm\dasm_x86.h">
+      <Filter>etc</Filter>
+    </ClInclude>
+    <ClInclude Include="StdAfx.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="dynasm\dasm_x86.lua">
+      <Filter>etc</Filter>
+    </None>
+    <None Include="jitlib\dump.lua">
+      <Filter>etc</Filter>
+    </None>
+    <None Include="jitlib\dumphints.lua">
+      <Filter>etc</Filter>
+    </None>
+    <None Include="dynasm\dynasm.lua">
+      <Filter>etc</Filter>
+    </None>
+    <None Include="jitlib\opt.lua">
+      <Filter>etc</Filter>
+    </None>
+    <None Include="jitlib\opt_lib.lua">
+      <Filter>etc</Filter>
+    </None>
+    <None Include="jitlib\trace.lua">
+      <Filter>etc</Filter>
+    </None>
+  </ItemGroup>
+</Project>

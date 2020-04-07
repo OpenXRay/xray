@@ -10,6 +10,7 @@
 
 #include "associative_vector.h"
 
+template <bool v> struct Bool2Type {static const bool value = v;};
 template <
 	typename _operator_condition,
 	typename _condition_state,
@@ -84,10 +85,15 @@ private:
 	IC		bool						is_goal_reached_impl	(const _index_type	&vertex_index) const;
 	IC		bool						is_goal_reached_impl	(const _index_type	&vertex_index, bool) const;
 	
-	template <bool>
+	/*template <bool>
 	IC		_edge_value_type			estimate_edge_weight_impl(const _index_type	&vertex_index) const {return estimate_edge_weight_impl(vertex_index);}
 	template <>
-	IC		_edge_value_type			estimate_edge_weight_impl<true>(const _index_type	&vertex_index) const {return estimate_edge_weight_impl(vertex_index,true);}
+	IC		_edge_value_type			estimate_edge_weight_impl<true>(const _index_type	&vertex_index) const {return estimate_edge_weight_impl(vertex_index,true);}*/
+
+	template <bool _search>
+	IC		_edge_value_type			estimate_edge_weight_impl(const _index_type	&vertex_index) const {return estimate_edge_weight_impl_help(vertex_index, Bool2Type<_search>());}
+	IC		_edge_value_type			estimate_edge_weight_impl_help(const _index_type	&vertex_index, Bool2Type<false>) const {return estimate_edge_weight_impl(vertex_index);}
+	IC		_edge_value_type			estimate_edge_weight_impl_help(const _index_type	&vertex_index, Bool2Type<true>) const {return estimate_edge_weight_impl(vertex_index, true);}
 
 	IC		_edge_value_type			estimate_edge_weight_impl(const _index_type	&vertex_index) const;
 	IC		_edge_value_type			estimate_edge_weight_impl(const _index_type	&vertex_index, bool) const;

@@ -50,7 +50,7 @@ static int start_year	= 1999;	// 1999
 
 #ifdef NDEBUG
 namespace std {
-	void terminate()
+	void _terminate()
 	{
 		abort();
 	}

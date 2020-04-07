@@ -153,8 +153,8 @@
 
 			enum { 
 				value = 
-					is_class<T1>::result && 
-					is_class<T2>::result && 
+					xrCore_type_traits::is_class<T1>::result && 
+					xrCore_type_traits::is_class<T2>::result && 
 					!is_same<T1,T2>::value &&
 					sizeof(detail::yes) == sizeof(select((T2*)(0)))
 			};
