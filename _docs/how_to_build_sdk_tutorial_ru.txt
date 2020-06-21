@@ -1,0 +1,57 @@
+1)Ставим CBuilder6 - borland ver 6.0 (build 10.166), ставим сервис пак 6. 
+
+2)Отключаем UAC, отключаем/настраиваем DEP. назначаем админские права bcb.exe
+
+http://windata.ru/windows-vista/nachinayushim-v/chto-takoe-uac-i-kak-ego-otklyuchit/
+http://shkolazhizni.ru/archive/0/n-19778/
+
+3)создаем вручную папки
+X:\intermediate_ed
+X:\intermediate_ed\ae
+X:\intermediate_ed\ecore
+X:\intermediate_ed\core
+X:\intermediate_ed\eprops
+X:\intermediate_ed\le
+X:\intermediate_ed\particles
+X:\intermediate_ed\pe
+X:\intermediate_ed\se
+X:\intermediate_ed\sound 
+
+3) Распаковываем из CBuilder6_stk_additional.rar папку Borland в C:\Program Files (x86) или где у вас стоит билдер.
+Это библиотеки для линковки, переконверченные в формат билдера, так как у вижуал студии и борланда немного разные понятия о с++. (если интересуют подробности, ищем в гугле: omf coff)
+
+4) tools -> environment options -> environment variables указываем свои пути
+
+DXSDK_DIR C:\STALKER_GAMES_SRC\STALKER\dxsdk
+XIPH_DIR C:\STALKER_GAMES_SRC\STALKER\SDK\Xiph\Include
+MAGIC_SW_DIR C:\STALKER_GAMES_SRC\STALKER\SDK\MagicSoftware\FreeMagic\include
+EAX_DIR C:\STALKER_GAMES_SRC\STALKER\SDK\eax
+ALSOC_DIR C:\STALKER_GAMES_SRC\STALKER\SDK\OpenAL\
+ETOOLSSOC_DIR C:\STALKER_GAMES_SRC\STALKER\xray-svn-trunk\ETools
+CORESOC_DIR C:\STALKER_GAMES_SRC\STALKER\xray-svn-trunk\xrCore
+COMPONENTS_SOC C:\STALKER_GAMES_SRC\STALKER\SDK\components
+SOC_SDK_DIR C:\STALKER_GAMES_SRC\STALKER
+MAIN_DIR C:\STALKER_GAMES_SRC
+SDK_DIR C:\STALKER_GAMES_SRC\STALKER\SDK
+
+5) нужно скопировать в windows\SysWOW64 или если у вас XP или x86 в windows\system32
+
+X:\STALKER\SDK\components\ElPack\bpl\elpackB6.BPL
+X:\STALKER\SDK\components\ElPack\bpl\elpkdbB6.BPL
+X:\STALKER\SDK\components\ElPack\bpl\elpproB6.BPL
+
+6)component->install packages
+
+нужно установить:
+(*устарело) borland user components - Borland\CBuilder6\Projects\Bpl\dclusr60.bpl
+editorB - STALKER\SDK\components\AlexMX\editorB.bpl
+eldos DB Aware Controls - STALKER\SDK\components\ElPack\Code\dceldbB6.bpl
+eldos Professional Components - STALKER\SDK\components\ElPack\Code\dcelppB6.bpl
+eldos Visual Components - STALKER\SDK\components\ElPack\Code\dclelpB6.bpl
+всё есть или в самом борланде или в SDK сорцев сталкера.
+
+7)после установки компонентов переоткрываем файл проекта
+
+8)кликаем на проекте собираемом, xrcoreb.dll например->options->properties->linker
+don't generate state files - включаем выключаем при рандомных багах компиляции на линковке
+еще при рандомных багах привыкаем делать сначала make потом build, помогает в 99% случаях

@@ -1,0 +1,63 @@
+This document contains a list of fixed bugs and improvements in BugTrap since version 1.2.2826.33101.
+
+ - 1.3.3466.24114 -
+[-] Fixed self-installation and de-installation of BugTrapServer as system service.
+
+ - 1.3.3291.42976 -
+[+] Added new flag BTF_DESCRIBEERROR that prompts user to briefly describe the error. User feedback is being sent along with other error details.
+[+] Added new flag BTF_RESTARTAPP that allows for automatically restarting the application after the crash.
+[+] Added new methods InstallSehFilter(), UninstallSehFilter() to .NET code. Now SEH filter can be controlled from managed code w/o having to use PInvoke.
+[+] Added new tag <reportName> to BugTrapServer configuration. This tag allows for overriding default report name. The following tokens are supported:
+    %n - for auto-incrementing report numbers.
+    %t - for inserting current time-stamp.
+
+ - 1.3.3277.38126 -
+[+] Win64 support on AMD-64 platform, including CrashExplorer.
+[+] Multi-monitor support. Screenshots are generated for each monitor.
+[+] Log file includes a list of host IP addresses.
+
+ - 1.2.3248.41806 -
+[+] Added new functions: BT_SaveSnapshotEx(), BT_SendSnapshotEx(), BT_MailSnapshotEx() that take existing exception info as an argument.
+[+] Added new functions: BT_GetExitMode(), BT_SetExitMode() that control app. termination.
+
+ - 1.2.3145.10 -
+[+] Error log includes detailed info about inner .NET exception (e.g. if unhandled exception is caused by another exception).
+
+ - 1.2.3139.43028 -
+[-] Fixed script that is updating version numbers in multiple files. Now .NET assembly version number matches to product version.
+
+ - 1.2.3117.43057 -
+[-] BT_ReadVersionInfo() was not reading file version info due to a type in the source code.
+
+ - 1.2.3109.33582 -
+[+] CrashExplorer now saves window state and all control values in Windows registry. In future release this basic functionality will be replaced with profile manager.
+[!] BugTrapN.dll got a strong name. Now it can be used by signed assemblies.
+
+ - 1.2.3039.15982 -
+[+] Added new method BT_InterceptSeuf() that allows for interception of SetUnhandledExceptionFilter() in dynamically loaded modules.
+
+ - 1.2.3038.39610 -
+[+] Added new flag BTF_INTERCEPTSEUF. When this flag is applied, BugTrap injects fake SetUnhandledExceptionFilter() and tricks C runtime library. This option allows BugTrap to handle the most severe runtime errors.
+[!] Ported BugTrap projects to Visual Studio 2008 environment.
+[-] Fixed a bug in a text view control, that was preventing it from synchronizing scrollbars in certain cases.
+
+ - 1.2.2996.34503 -
+[-] BugTrap opens log files and adds them to the report even if these files are not properly closed by the application. Log files have to be opened in shared read/write mode.
+
+ - 1.2.2905.32130 -
+[-] Second fix for a problem with dynamically loaded .NET assemblies, again thanks to Tom. B.
+
+ - 1.2.2898.41669 -
+[-] Fixed a bug with memory overrun in .NET layer thanks to Tom. B.
+[-] Fixed a bug with dynamically loaded .NET assemblies thanks to Tom. B.
+
+ - 1.2.2844.22583 -
+[+] New log type BTLF_STREAM optimized for large text log files. Unlike BTLF_XML and BTLF_TEXT log records are not cached in memory.
+[+] New example BugTrapLogTest demonstrates the usage of log functions. It could also be used as a performance test.
+[!] Improved performance and thread concurrency of existing log functions.
+
+Legend:
+
+[+] - new feature
+[!] - change of an existing functionality
+[-] - bug fix
