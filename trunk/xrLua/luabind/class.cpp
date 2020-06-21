@@ -36,7 +36,7 @@ void boost::throw_exception	( std::exception const & )
 }
 
 #ifdef NDEBUG
-void std::terminate()
+void std::_terminate()
 {
 	abort();
 }

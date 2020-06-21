@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Kernel">
+      <UniqueIdentifier>{65a5bcd3-3d98-4b6e-8bef-514758971401}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Parser">
+      <UniqueIdentifier>{c1b03f23-90f4-4295-b9e5-61fd89029fa5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Parser\TinyXML">
+      <UniqueIdentifier>{3d57c763-c682-4323-9253-b3d59a447fd7}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="StdAfx.cpp">
+      <Filter>Kernel</Filter>
+    </ClCompile>
+    <ClCompile Include="xrXMLParser.cpp">
+      <Filter>Parser</Filter>
+    </ClCompile>
+    <ClCompile Include="tinystr.cpp">
+      <Filter>Parser\TinyXML</Filter>
+    </ClCompile>
+    <ClCompile Include="tinyxml.cpp">
+      <Filter>Parser\TinyXML</Filter>
+    </ClCompile>
+    <ClCompile Include="tinyxmlerror.cpp">
+      <Filter>Parser\TinyXML</Filter>
+    </ClCompile>
+    <ClCompile Include="tinyxmlparser.cpp">
+      <Filter>Parser\TinyXML</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="stdafx.h">
+      <Filter>Kernel</Filter>
+    </ClInclude>
+    <ClInclude Include="xrXMLParser.h">
+      <Filter>Parser</Filter>
+    </ClInclude>
+    <ClInclude Include="tinystr.h">
+      <Filter>Parser\TinyXML</Filter>
+    </ClInclude>
+    <ClInclude Include="tinyxml.h">
+      <Filter>Parser\TinyXML</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

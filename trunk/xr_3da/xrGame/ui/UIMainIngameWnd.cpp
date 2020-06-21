@@ -29,6 +29,7 @@
 
 #include "UIInventoryUtilities.h"
 
+#include <functional>
 
 #include "UIXmlInit.h"
 #include "UIPdaMsgListItem.h"
