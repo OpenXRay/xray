@@ -5,7 +5,6 @@
 #include "../../xrcore/xrCore.h"
 #include "../game_base_space.h"
 #include "../RegistryFuncs.h"
-#include "../battleye.h"
 
 xr_token g_GameModes	[] = {
 	{ "st_deathmatch",			GAME_DEATHMATCH	},
@@ -50,10 +49,6 @@ void CUIOptConCom::Init()
 	CMD3(CCC_Mask,		"mm_mm_net_srv_dedicated",			&m_uNetSrvParams,	flNetSrvDedicated);
 	CMD3(CCC_Mask,		"mm_net_con_publicserver",			&m_uNetSrvParams,	flNetConPublicServer);
 	CMD3(CCC_Mask,		"mm_net_con_spectator_on",			&m_uNetSrvParams,	flNetConSpectatorOn);
-#ifdef BATTLEYE
-	CMD3(CCC_Mask,		"mm_net_use_battleye",				&m_uNetSrvParams,	flNetConBattlEyeOn);
-//-	CMD3(CCC_Mask,		"mm_net_battleye_auto_update",		&m_uNetSrvParams,	flNetConBattlEyeAutoUpdate);
-#endif // BATTLEYE
 
 	m_iNetConSpectator	= 20;
 	CMD4(CCC_Integer,	"mm_net_con_spectator",				&m_iNetConSpectator, 1, 32);
@@ -77,11 +72,6 @@ void CUIOptConCom::Init()
 	CMD3(CCC_Mask,		"mm_net_filter_wo_pass",			&m_uNetFilter,		fl_wo_pass);
 	CMD3(CCC_Mask,		"mm_net_filter_wo_ff",				&m_uNetFilter,		fl_wo_ff);
 	CMD3(CCC_Mask,		"mm_net_filter_listen",				&m_uNetFilter,		fl_listen);
-
-#ifdef BATTLEYE
-	CMD3(CCC_Mask,		"mm_net_filter_battleye",			&m_uNetFilter,		fl_battleye);
-#endif // BATTLEYE
-
 };
 
 void		CUIOptConCom::ReadPlayerNameFromRegistry	()

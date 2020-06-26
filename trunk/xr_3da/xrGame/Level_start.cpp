@@ -237,10 +237,6 @@ bool xr_stdcall net_start_finalizer()
 		DEL_INSTANCE	(g_pGameLevel);
 		Console->Execute("main_menu on");
 
-		if (g_connect_server_err==xrServer::ErrBELoad)
-		{
-			MainMenu()->OnLoadError("BattlEye/BEServer.dll");
-		}else
 		if(g_connect_server_err==xrServer::ErrConnect && !psNET_direct_connect && !g_dedicated_server) 
 		{
 			MainMenu()->SwitchToMultiplayerMenu();

@@ -65,7 +65,7 @@ enum {
 	M_CHANGE_SELF_NAME,
 	M_REMOTE_CONTROL_AUTH,
 	M_REMOTE_CONTROL_CMD,
-	M_BATTLEYE,
+    M_BATTLEYE, // not used, to be removed
 	M_MAP_SYNC,
 
 	MSG_FORCEDWORD				= u32(-1)

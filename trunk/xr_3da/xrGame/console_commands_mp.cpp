@@ -1040,100 +1040,6 @@ public:
 	virtual void	Info	(TInfo& I){strcpy(I,"swap teams for artefacthunt game"); }
 };
 
-
-#ifdef BATTLEYE
-
-class CCC_BattlEyeSrv : public IConsole_Command
-{
-public:
-	CCC_BattlEyeSrv( LPCSTR N ) : IConsole_Command(N)  { bEmptyArgsHandled = true; }
-	bool  ExecuteGetState( LPCSTR args )
-	{
-		if ( args[0] == 0 )
-		{
-			if ( Level().battleye_system.server )
-			{
-				Msg( "BattlEye Server is enabled" );
-			}
-			else
-			{
-				Msg( "BattlEye Server is disabled" );
-			}
-			return true;
-		}
-		return false;
-	}
-	bool  ExecuteBattlEyeServerCmd( LPCSTR args )
-	{
-		if ( Level().battleye_system.server )
-		{
-			Level().battleye_system.server->Command( (char*)args );
-			return true;
-		}
-		return false;
-	}
-	virtual void  Execute( LPCSTR args )
-	{
-		if ( !g_pGameLevel || !OnServer() )
-		{
-			return;
-		}
-		if ( ExecuteGetState( args ) ) return;
-		ExecuteBattlEyeServerCmd( args );
-	}
-	virtual void Info( TInfo& I )
-	{
-		strcpy( I, "BattlEye Server commands" );
-	}
-};
-
-class CCC_BattlEyeCl : public IConsole_Command
-{
-public:
-	CCC_BattlEyeCl( LPCSTR N ) : IConsole_Command(N)  { bEmptyArgsHandled = true; }
-	bool  ExecuteGetState( LPCSTR args )
-	{
-		if ( args[0] == 0 )
-		{
-			if ( Level().battleye_system.client )
-			{
-				Msg("BattlEye Client is enabled");
-			}
-			else
-			{
-				Msg("BattlEye Client is disabled");
-			}
-			return true;
-		}
-		return false;
-	}
-	bool ExecuteBattlEyeClientCmd( LPCSTR args )
-	{
-		if ( Level().battleye_system.client )
-		{
-			Level().battleye_system.client->Command( (char*)args );
-			return true;
-		}
-		return false;
-	}
-	virtual void Execute( LPCSTR args )
-	{
-		if ( !g_pGameLevel )
-		{
-			return;
-		}
-		if ( ExecuteGetState( args ) ) return;
-		ExecuteBattlEyeClientCmd( args );
-	}
-
-	virtual void  Info( TInfo& I )
-	{
-		strcpy( I, "BattlEye Client commands" );
-	}
-};
-
-#endif // BATTLEYE
-
 class CCC_Name : public IConsole_Command
 {
 public:
@@ -1384,11 +1290,6 @@ void register_mp_console_commands()
 	CMD1(CCC_Name,			"name");
 	CMD1(CCC_SvStatus,		"sv_status");
 	CMD1(CCC_SvChat,		"chat");
-#ifdef BATTLEYE
-	CMD1(CCC_BattlEyeSrv,	"beserver" );
-	CMD1(CCC_BattlEyeCl,	"beclient" );
-	CMD4(CCC_SV_Integer,	"bemsg"    , (int*)&g_be_message_out, 0, 1 );
-#endif // BATTLEYE
 	
 	CMD1(CCC_CompressorStatus,"net_compressor_status");
 	CMD4(CCC_SV_Integer,	"net_compressor_enabled"		,	(int*)&g_net_compressor_enabled	,	0,1);
