@@ -321,12 +321,6 @@ void CLevel::ClientReceive()
 				if (GameID() != GAME_SINGLE)
 					Game().m_WeaponUsageStatistic->OnUpdateRespond(P);
 			}break;
-		case M_BATTLEYE:
-			{
-#ifdef BATTLEYE
-			battleye_system.ReadPacketClient( P );
-#endif // BATTLEYE
-			}break;
 		}
 
 		net_msg_Release();

@@ -82,5 +82,5 @@
 #define T_SCORE_T_KEY							132
 
 #define	G_MAX_PING_KEY							133
-#define	G_BATTLEYE_KEY							134
+//#define	G_BATTLEYE_KEY							134
 #define	G_USER_PASSWORD_KEY						135
