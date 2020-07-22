@@ -60,21 +60,21 @@
     <OutDir>x:\binaries\</OutDir>
     <IntDir>x:\intermediate\$(Configuration)\$(ProjectName)\</IntDir>
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>S:\xrLua\src;../xrCore/;../;Z:\boost_1_30_0;Z:\luabind\luabind;$(VC_IncludePath);$(WindowsSDK_IncludePath);Z:\stlport;</IncludePath>
+    <IncludePath>S:\xrLua\src;../xrCore/;../;Z:\boost_1_30_0;Z:\luabind\luabind;$(VC_IncludePath);$(WindowsSDK_IncludePath);</IncludePath>
     <LibraryPath>X:\libraries;$(VC_LibraryPath_x86);$(WindowsSDK_LibraryPath_x86);</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <OutDir>x:\binaries\</OutDir>
     <IntDir>x:\intermediate\$(Configuration)\$(ProjectName)\</IntDir>
     <LinkIncremental>false</LinkIncremental>
-    <IncludePath>S:\xrLua\src;../xrCore/;../;Z:\boost_1_30_0;Z:\luabind\luabind;$(VC_IncludePath);$(WindowsSDK_IncludePath);Z:\stlport;</IncludePath>
+    <IncludePath>S:\xrLua\src;../xrCore/;../;Z:\boost_1_30_0;Z:\luabind\luabind;$(VC_IncludePath);$(WindowsSDK_IncludePath);</IncludePath>
     <LibraryPath>X:\libraries;$(VC_LibraryPath_x86);$(WindowsSDK_LibraryPath_x86);</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Mixed|Win32'">
     <OutDir>x:\binaries\</OutDir>
     <IntDir>x:\intermediate\$(Configuration)\$(ProjectName)\</IntDir>
     <LinkIncremental>false</LinkIncremental>
-    <IncludePath>S:\xrLua\src;../xrCore/;../;Z:\boost_1_30_0;Z:\luabind\luabind;$(VC_IncludePath);$(WindowsSDK_IncludePath);Z:\stlport;</IncludePath>
+    <IncludePath>S:\xrLua\src;../xrCore/;../;Z:\boost_1_30_0;Z:\luabind\luabind;$(VC_IncludePath);$(WindowsSDK_IncludePath);</IncludePath>
     <LibraryPath>X:\libraries;$(VC_LibraryPath_x86);$(WindowsSDK_LibraryPath_x86);</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
