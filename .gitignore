@@ -10,6 +10,7 @@
 
 # Visual C++ cache files
 ipch/
+xr_build/
 *.aps
 *.ncb
 *.opendb
