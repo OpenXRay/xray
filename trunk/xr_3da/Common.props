@@ -70,6 +70,7 @@
     <ClCompile Condition="'$(Configuration)'=='Debug'">
       <!-- MultiProcessorCompilation isn't compatible with LinkIncremental and UseDebugLibraries -->
       <MultiProcessorCompilation>false</MultiProcessorCompilation>
+      <Optimization>Disabled</Optimization>
     </ClCompile>
 
     <ClCompile Condition="'$(Configuration)'=='Mixed'">
@@ -103,7 +104,7 @@
     </Link>
 
     <Link Condition="'$(Configuration)'=='Mixed'">
-      <GenerateDebugInformation>DebugFastLink</GenerateDebugInformation>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
 
     <Link Condition="'$(Configuration)'=='Release'">
