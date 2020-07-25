@@ -3,7 +3,7 @@
 
 using std::swap;
 
-#include "_type_traits.h"
+#include <type_traits>
 
 #ifdef	__BORLANDC__
 #define M_NOSTDCONTAINERS_EXT
