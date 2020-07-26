@@ -145,6 +145,7 @@
       <GenerateMapFile>false</GenerateMapFile>
       <MapFileName>
       </MapFileName>
+      <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Mixed|Win32'">

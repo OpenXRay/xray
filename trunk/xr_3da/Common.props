@@ -29,6 +29,7 @@
     <xrLibDir>$(xrBuildDir)lib\$(xrPlatform)\$(Configuration)\</xrLibDir>
     <xrIntDir>$(xrBuildDir)intermediate\$(xrPlatform)\$(Configuration)\</xrIntDir>
     <xrSdkDir>$(xrTunkDir)..\SDK\</xrSdkDir>
+    <xrExternals>$(xrTunkDir)..\externals\</xrExternals>
   </PropertyGroup>
   
   <PropertyGroup Label="OutputDirectories">
