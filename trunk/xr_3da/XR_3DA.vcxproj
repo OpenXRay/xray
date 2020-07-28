@@ -101,29 +101,29 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ExtensionsToDeleteOnClean>*.idb%3b*.obj%3b*.ilk%3b*.pdb%3b*.tlb%3b*.tli%3b*.tlh%3b*.tmp%3b*.rsp%3b*.bat%3b$(TargetPath)</ExtensionsToDeleteOnClean>
     <IgnoreImportLibrary>true</IgnoreImportLibrary>
-    <IncludePath>$(xrSdkDir)OpenAL\include;$(xrSdkDir)Xiph\Include;$(xrSdkDir)boost_1_30_0;$(xrTunkDir)xrLua\src;$(xrSdkDir)luabind\luabind;$(xrTunkDir)xrCore;$(VC_IncludePath);$(WindowsSDK_IncludePath)</IncludePath>
+    <IncludePath>$(xrSdkDir)OpenAL\include;$(xrSdkDir)Xiph\Include;$(xrSdkDir)boost_1_30_0;$(SolutionDir)xrLua\src;$(xrSdkDir)luabind\luabind;$(SolutionDir)xrCore;$(VC_IncludePath);$(WindowsSDK_IncludePath)</IncludePath>
     <LibraryPath>$(xrSdkDir)OpenAL\libs;$(xrSdkDir)Xiph\Libs;$(VC_LibraryPath_x86);$(WindowsSDK_LibraryPath_x86)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Mixed|Win32'">
-    <IncludePath>$(xrSdkDir)OpenAL\include;$(xrSdkDir)Xiph\Include;$(xrSdkDir)boost_1_30_0;$(xrTunkDir)xrLua\src;$(xrSdkDir)luabind\luabind;$(xrTunkDir)xrCore;$(VC_IncludePath);$(WindowsSDK_IncludePath)</IncludePath>
+    <IncludePath>$(xrSdkDir)OpenAL\include;$(xrSdkDir)Xiph\Include;$(xrSdkDir)boost_1_30_0;$(SolutionDir)xrLua\src;$(xrSdkDir)luabind\luabind;$(SolutionDir)xrCore;$(VC_IncludePath);$(WindowsSDK_IncludePath)</IncludePath>
     <LibraryPath>$(xrSdkDir)OpenAL\libs;$(xrSdkDir)Xiph\Libs;$(VC_LibraryPath_x86);$(WindowsSDK_LibraryPath_x86)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <IncludePath>$(xrSdkDir)OpenAL\include;$(xrSdkDir)Xiph\Include;$(xrSdkDir)boost_1_30_0;$(xrTunkDir)xrLua\src;$(xrSdkDir)luabind\luabind;$(xrTunkDir)xrCore;$(VC_IncludePath);$(WindowsSDK_IncludePath)</IncludePath>
+    <IncludePath>$(xrSdkDir)OpenAL\include;$(xrSdkDir)Xiph\Include;$(xrSdkDir)boost_1_30_0;$(SolutionDir)xrLua\src;$(xrSdkDir)luabind\luabind;$(SolutionDir)xrCore;$(VC_IncludePath);$(WindowsSDK_IncludePath)</IncludePath>
     <LibraryPath>$(xrSdkDir)OpenAL\libs;$(xrSdkDir)Xiph\Libs;$(VC_LibraryPath_x86);$(WindowsSDK_LibraryPath_x86)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug_Dedicated|Win32'">
     <ExtensionsToDeleteOnClean>*.idb%3b*.obj%3b*.ilk%3b*.pdb%3b*.tlb%3b*.tli%3b*.tlh%3b*.tmp%3b*.rsp%3b*.bat%3b$(TargetPath)</ExtensionsToDeleteOnClean>
     <IgnoreImportLibrary>true</IgnoreImportLibrary>
-    <IncludePath>$(xrSdkDir)OpenAL\include;$(xrSdkDir)Xiph\Include;$(xrSdkDir)boost_1_30_0;$(xrTunkDir)xrLua\src;$(xrSdkDir)luabind\luabind;$(xrTunkDir)xrCore;$(VC_IncludePath);$(WindowsSDK_IncludePath)</IncludePath>
+    <IncludePath>$(xrSdkDir)OpenAL\include;$(xrSdkDir)Xiph\Include;$(xrSdkDir)boost_1_30_0;$(SolutionDir)xrLua\src;$(xrSdkDir)luabind\luabind;$(SolutionDir)xrCore;$(VC_IncludePath);$(WindowsSDK_IncludePath)</IncludePath>
     <LibraryPath>$(xrSdkDir)OpenAL\libs;$(xrSdkDir)Xiph\Libs;$(VC_LibraryPath_x86);$(WindowsSDK_LibraryPath_x86)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Mixed_Dedicated|Win32'">
-    <IncludePath>$(xrSdkDir)OpenAL\include;$(xrSdkDir)Xiph\Include;$(xrSdkDir)boost_1_30_0;$(xrTunkDir)xrLua\src;$(xrSdkDir)luabind\luabind;$(xrTunkDir)xrCore;$(VC_IncludePath);$(WindowsSDK_IncludePath)</IncludePath>
+    <IncludePath>$(xrSdkDir)OpenAL\include;$(xrSdkDir)Xiph\Include;$(xrSdkDir)boost_1_30_0;$(SolutionDir)xrLua\src;$(xrSdkDir)luabind\luabind;$(SolutionDir)xrCore;$(VC_IncludePath);$(WindowsSDK_IncludePath)</IncludePath>
     <LibraryPath>$(xrSdkDir)OpenAL\libs;$(xrSdkDir)Xiph\Libs;$(VC_LibraryPath_x86);$(WindowsSDK_LibraryPath_x86)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release_Dedicated|Win32'">
-    <IncludePath>$(xrSdkDir)OpenAL\include;$(xrSdkDir)Xiph\Include;$(xrSdkDir)boost_1_30_0;$(xrTunkDir)xrLua\src;$(xrSdkDir)luabind\luabind;$(xrTunkDir)xrCore;$(VC_IncludePath);$(WindowsSDK_IncludePath)</IncludePath>
+    <IncludePath>$(xrSdkDir)OpenAL\include;$(xrSdkDir)Xiph\Include;$(xrSdkDir)boost_1_30_0;$(SolutionDir)xrLua\src;$(xrSdkDir)luabind\luabind;$(SolutionDir)xrCore;$(VC_IncludePath);$(WindowsSDK_IncludePath)</IncludePath>
     <LibraryPath>$(xrSdkDir)OpenAL\libs;$(xrSdkDir)Xiph\Libs;$(VC_LibraryPath_x86);$(WindowsSDK_LibraryPath_x86)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">

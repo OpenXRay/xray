@@ -18,8 +18,7 @@
   </PropertyGroup>
   
   <PropertyGroup Label="UserMacros">
-    <xrTunkDir>$(SolutionDir)..\</xrTunkDir>
-    <xrBuildDir>$(SolutionDir)..\..\xr_build\</xrBuildDir>
+    <xrBuildDir>$(SolutionDir)..\xr_build\</xrBuildDir>
   </PropertyGroup>
   
   <PropertyGroup Label="UserMacros">
@@ -28,8 +27,8 @@
     <xrBinDir>$(xrBuildDir)bin\$(xrPlatform)\$(Configuration)\</xrBinDir>
     <xrLibDir>$(xrBuildDir)lib\$(xrPlatform)\$(Configuration)\</xrLibDir>
     <xrIntDir>$(xrBuildDir)intermediate\$(xrPlatform)\$(Configuration)\</xrIntDir>
-    <xrSdkDir>$(xrTunkDir)..\SDK\</xrSdkDir>
-    <xrExternals>$(xrTunkDir)..\externals\</xrExternals>
+    <xrSdkDir>$(SolutionDir)..\SDK\</xrSdkDir>
+    <xrExternals>$(SolutionDir)..\externals\</xrExternals>
   </PropertyGroup>
   
   <PropertyGroup Label="OutputDirectories">
@@ -52,6 +51,7 @@
   <ItemDefinitionGroup>
     <ClCompile>
       <AdditionalIncludeDirectories>
+        $(SolutionDir);
         $(xrSdkDir)dxSDK/Include;
         %(AdditionalIncludeDirectories)
       </AdditionalIncludeDirectories>

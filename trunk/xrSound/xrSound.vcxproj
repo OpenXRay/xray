@@ -56,15 +56,15 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <IgnoreImportLibrary>true</IgnoreImportLibrary>
-    <IncludePath>$(xrSdkDir)OpenAL\Include;$(xrSdkDir)Xiph\include;$(xrSdkDir)eax\include;$(xrSdkDir)OpenAL\libs;$(xrTunkDir)xrCore;$(VC_IncludePath);$(WindowsSDK_IncludePath)</IncludePath>
+    <IncludePath>$(xrSdkDir)OpenAL\Include;$(xrSdkDir)Xiph\include;$(xrSdkDir)eax\include;$(xrSdkDir)OpenAL\libs;$(SolutionDir)xrCore;$(VC_IncludePath);$(WindowsSDK_IncludePath)</IncludePath>
     <LibraryPath>$(xrSdkDir)eax\;$(xrSdkDir)Xiph\Libs;$(VC_LibraryPath_x86);$(WindowsSDK_LibraryPath_x86)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <IncludePath>$(xrSdkDir)OpenAL\Include;$(xrSdkDir)Xiph\include;$(xrSdkDir)eax\include;$(xrSdkDir)OpenAL\libs;$(xrTunkDir)xrCore;$(VC_IncludePath);$(WindowsSDK_IncludePath)</IncludePath>
+    <IncludePath>$(xrSdkDir)OpenAL\Include;$(xrSdkDir)Xiph\include;$(xrSdkDir)eax\include;$(xrSdkDir)OpenAL\libs;$(SolutionDir)xrCore;$(VC_IncludePath);$(WindowsSDK_IncludePath)</IncludePath>
     <LibraryPath>$(xrSdkDir)eax\;$(xrSdkDir)Xiph\Libs;$(VC_LibraryPath_x86);$(WindowsSDK_LibraryPath_x86)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Mixed|Win32'">
-    <IncludePath>$(xrSdkDir)OpenAL\Include;$(xrSdkDir)Xiph\include;$(xrSdkDir)eax\include;$(xrSdkDir)OpenAL\libs;$(xrTunkDir)xrCore;$(VC_IncludePath);$(WindowsSDK_IncludePath)</IncludePath>
+    <IncludePath>$(xrSdkDir)OpenAL\Include;$(xrSdkDir)Xiph\include;$(xrSdkDir)eax\include;$(xrSdkDir)OpenAL\libs;$(SolutionDir)xrCore;$(VC_IncludePath);$(WindowsSDK_IncludePath)</IncludePath>
     <LibraryPath>$(xrSdkDir)eax\;$(xrSdkDir)Xiph\Libs;$(VC_LibraryPath_x86);$(WindowsSDK_LibraryPath_x86)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">

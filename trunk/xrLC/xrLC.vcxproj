@@ -101,17 +101,17 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup>
     <_ProjectFileVersion>10.0.40219.1</_ProjectFileVersion>
-    <IncludePath Condition="'$(Configuration)|$(Platform)'=='Mixed|Win32'">$(xrTunkDir)xrCore;$(xrSdkDir)MagicSoftware\FreeMagic\Include;$(xrSdkDir)FreeImage;$(IncludePath)</IncludePath>
+    <IncludePath Condition="'$(Configuration)|$(Platform)'=='Mixed|Win32'">$(SolutionDir)xrCore;$(xrSdkDir)MagicSoftware\FreeMagic\Include;$(xrSdkDir)FreeImage;$(IncludePath)</IncludePath>
     <LibraryPath Condition="'$(Configuration)|$(Platform)'=='Mixed|Win32'">$(xrSdkDir)FreeImage;$(xrSdkDir)MagicSoftware\FreeMagic\Library\ReleaseDLL;$(LibraryPath)</LibraryPath>
-    <IncludePath Condition="'$(Configuration)|$(Platform)'=='Mixed_Priquel|Win32'">$(xrTunkDir)xrCore;$(xrSdkDir)MagicSoftware\FreeMagic\Include;$(xrSdkDir)FreeImage;$(IncludePath)</IncludePath>
+    <IncludePath Condition="'$(Configuration)|$(Platform)'=='Mixed_Priquel|Win32'">$(SolutionDir)xrCore;$(xrSdkDir)MagicSoftware\FreeMagic\Include;$(xrSdkDir)FreeImage;$(IncludePath)</IncludePath>
     <LibraryPath Condition="'$(Configuration)|$(Platform)'=='Mixed_Priquel|Win32'">$(xrSdkDir)FreeImage;$(xrSdkDir)MagicSoftware\FreeMagic\Library\ReleaseDLL;$(LibraryPath)</LibraryPath>
-    <IncludePath Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(xrTunkDir)xrCore;$(xrSdkDir)MagicSoftware\FreeMagic\Include;$(xrSdkDir)FreeImage;$(IncludePath)</IncludePath>
+    <IncludePath Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)xrCore;$(xrSdkDir)MagicSoftware\FreeMagic\Include;$(xrSdkDir)FreeImage;$(IncludePath)</IncludePath>
     <LibraryPath Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(xrSdkDir)FreeImage;$(xrSdkDir)MagicSoftware\FreeMagic\Library\ReleaseDLL;$(LibraryPath)</LibraryPath>
-    <IncludePath Condition="'$(Configuration)|$(Platform)'=='Release_Priquel|Win32'">$(xrTunkDir)xrCore;$(xrSdkDir)MagicSoftware\FreeMagic\Include;$(xrSdkDir)FreeImage;$(IncludePath)</IncludePath>
+    <IncludePath Condition="'$(Configuration)|$(Platform)'=='Release_Priquel|Win32'">$(SolutionDir)xrCore;$(xrSdkDir)MagicSoftware\FreeMagic\Include;$(xrSdkDir)FreeImage;$(IncludePath)</IncludePath>
     <LibraryPath Condition="'$(Configuration)|$(Platform)'=='Release_Priquel|Win32'">$(xrSdkDir)FreeImage;$(xrSdkDir)MagicSoftware\FreeMagic\Library\ReleaseDLL;$(LibraryPath)</LibraryPath>
-    <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(xrTunkDir)xrCore;$(xrSdkDir)MagicSoftware\FreeMagic\Include;$(xrSdkDir)FreeImage;$(IncludePath)</IncludePath>
+    <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)xrCore;$(xrSdkDir)MagicSoftware\FreeMagic\Include;$(xrSdkDir)FreeImage;$(IncludePath)</IncludePath>
     <LibraryPath Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(xrSdkDir)FreeImage;$(xrSdkDir)MagicSoftware\FreeMagic\Library\ReleaseDLL;$(LibraryPath)</LibraryPath>
-    <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug_Priquel|Win32'">$(xrTunkDir)xrCore;$(xrSdkDir)MagicSoftware\FreeMagic\Include;$(xrSdkDir)FreeImage;$(IncludePath)</IncludePath>
+    <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug_Priquel|Win32'">$(SolutionDir)xrCore;$(xrSdkDir)MagicSoftware\FreeMagic\Include;$(xrSdkDir)FreeImage;$(IncludePath)</IncludePath>
     <LibraryPath Condition="'$(Configuration)|$(Platform)'=='Debug_Priquel|Win32'">$(xrSdkDir)FreeImage;$(xrSdkDir)MagicSoftware\FreeMagic\Library\ReleaseDLL;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">

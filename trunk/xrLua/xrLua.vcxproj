@@ -57,15 +57,15 @@
     <_ProjectFileVersion>12.0.21005.1</_ProjectFileVersion>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <IncludePath>$(xrTunkDir)xrLua\src;$(xrTunkDir)xrCore/;$(xrTunkDir);$(xrSdkDir)boost_1_30_0;$(xrSdkDir)luabind\luabind;$(VC_IncludePath);$(WindowsSDK_IncludePath)</IncludePath>
+    <IncludePath>$(SolutionDir)xrLua\src;$(SolutionDir)xrCore/;$(SolutionDir);$(xrSdkDir)boost_1_30_0;$(xrSdkDir)luabind\luabind;$(VC_IncludePath);$(WindowsSDK_IncludePath)</IncludePath>
     <LibraryPath>$(VC_LibraryPath_x86);$(WindowsSDK_LibraryPath_x86)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <IncludePath>$(xrTunkDir)xrLua\src;$(xrTunkDir)xrCore/;$(xrTunkDir);$(xrSdkDir)boost_1_30_0;$(xrSdkDir)luabind\luabind;$(VC_IncludePath);$(WindowsSDK_IncludePath)</IncludePath>
+    <IncludePath>$(SolutionDir)xrLua\src;$(SolutionDir)xrCore/;$(SolutionDir);$(xrSdkDir)boost_1_30_0;$(xrSdkDir)luabind\luabind;$(VC_IncludePath);$(WindowsSDK_IncludePath)</IncludePath>
     <LibraryPath>$(VC_LibraryPath_x86);$(WindowsSDK_LibraryPath_x86)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Mixed|Win32'">
-    <IncludePath>$(xrTunkDir)xrLua\src;$(xrTunkDir)xrCore/;$(xrTunkDir);$(xrSdkDir)boost_1_30_0;$(xrSdkDir)luabind\luabind;$(VC_IncludePath);$(WindowsSDK_IncludePath)</IncludePath>
+    <IncludePath>$(SolutionDir)xrLua\src;$(SolutionDir)xrCore/;$(SolutionDir);$(xrSdkDir)boost_1_30_0;$(xrSdkDir)luabind\luabind;$(VC_IncludePath);$(WindowsSDK_IncludePath)</IncludePath>
     <LibraryPath>$(VC_LibraryPath_x86);$(WindowsSDK_LibraryPath_x86)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">

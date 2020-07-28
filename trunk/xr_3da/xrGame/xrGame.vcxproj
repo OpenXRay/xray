@@ -102,24 +102,24 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ExtensionsToDeleteOnClean>*.idb%3b*.obj%3b*.ilk%3b*.pdb%3b*.tlb%3b*.tli%3b*.tlh%3b*.tmp%3b*.rsp%3b*.bat%3b$(TargetPath)</ExtensionsToDeleteOnClean>
     <IgnoreImportLibrary>true</IgnoreImportLibrary>
-    <IncludePath>$(xrSdkDir)loki;$(xrSdkDir)boost_1_30_0;$(xrSdkDir)luabind\luabind;$(xrTunkDir)xrLua\src;$(xrTunkDir)xrCore;$(VC_IncludePath);$(WindowsSDK_IncludePath)</IncludePath>
+    <IncludePath>$(xrSdkDir)loki;$(xrSdkDir)boost_1_30_0;$(xrSdkDir)luabind\luabind;$(SolutionDir)xrLua\src;$(SolutionDir)xrCore;$(VC_IncludePath);$(WindowsSDK_IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Mixed|Win32'">
-    <IncludePath>$(xrSdkDir)loki;$(xrSdkDir)boost_1_30_0;$(xrSdkDir)luabind\luabind;$(xrTunkDir)xrLua\src;$(xrTunkDir)xrCore;$(VC_IncludePath);$(WindowsSDK_IncludePath)</IncludePath>
+    <IncludePath>$(xrSdkDir)loki;$(xrSdkDir)boost_1_30_0;$(xrSdkDir)luabind\luabind;$(SolutionDir)xrLua\src;$(SolutionDir)xrCore;$(VC_IncludePath);$(WindowsSDK_IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <IncludePath>$(xrSdkDir)loki;$(xrSdkDir)boost_1_30_0;$(xrSdkDir)luabind\luabind;$(xrTunkDir)xrLua\src;$(xrTunkDir)xrCore;$(VC_IncludePath);$(WindowsSDK_IncludePath)</IncludePath>
+    <IncludePath>$(xrSdkDir)loki;$(xrSdkDir)boost_1_30_0;$(xrSdkDir)luabind\luabind;$(SolutionDir)xrLua\src;$(SolutionDir)xrCore;$(VC_IncludePath);$(WindowsSDK_IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug_Priquel|Win32'">
     <ExtensionsToDeleteOnClean>*.idb%3b*.obj%3b*.ilk%3b*.pdb%3b*.tlb%3b*.tli%3b*.tlh%3b*.tmp%3b*.rsp%3b*.bat%3b$(TargetPath)</ExtensionsToDeleteOnClean>
     <IgnoreImportLibrary>true</IgnoreImportLibrary>
-    <IncludePath>$(xrSdkDir)loki;$(xrSdkDir)boost_1_30_0;$(xrSdkDir)luabind\luabind;$(xrTunkDir)xrLua\src;$(xrTunkDir)xrCore;$(VC_IncludePath);$(WindowsSDK_IncludePath)</IncludePath>
+    <IncludePath>$(xrSdkDir)loki;$(xrSdkDir)boost_1_30_0;$(xrSdkDir)luabind\luabind;$(SolutionDir)xrLua\src;$(SolutionDir)xrCore;$(VC_IncludePath);$(WindowsSDK_IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Mixed_Priquel|Win32'">
-    <IncludePath>$(xrSdkDir)loki;$(xrSdkDir)boost_1_30_0;$(xrSdkDir)luabind\luabind;$(xrTunkDir)xrLua\src;$(xrTunkDir)xrCore;$(VC_IncludePath);$(WindowsSDK_IncludePath)</IncludePath>
+    <IncludePath>$(xrSdkDir)loki;$(xrSdkDir)boost_1_30_0;$(xrSdkDir)luabind\luabind;$(SolutionDir)xrLua\src;$(SolutionDir)xrCore;$(VC_IncludePath);$(WindowsSDK_IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release_Priquel|Win32'">
-    <IncludePath>$(xrSdkDir)loki;$(xrSdkDir)boost_1_30_0;$(xrSdkDir)luabind\luabind;$(xrTunkDir)xrLua\src;$(xrTunkDir)xrCore;$(VC_IncludePath);$(WindowsSDK_IncludePath)</IncludePath>
+    <IncludePath>$(xrSdkDir)loki;$(xrSdkDir)boost_1_30_0;$(xrSdkDir)luabind\luabind;$(SolutionDir)xrLua\src;$(SolutionDir)xrCore;$(VC_IncludePath);$(WindowsSDK_IncludePath)</IncludePath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <Midl>
