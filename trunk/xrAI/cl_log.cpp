@@ -1,6 +1,6 @@
 #include "stdafx.h"
 #include "resource.h"
-#include "log.h"
+#include "../xrCore/log.h"
 #include <time.h>
 #include <mmsystem.h>
 

@@ -17,7 +17,7 @@
 
 #ifdef NDEBUG
 namespace std {
-	void terminate()
+	void _terminate()
 	{
 		abort();
 	}

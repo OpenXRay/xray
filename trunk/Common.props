@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(SolutionDir)ConfigurationDefs.props" />
+  </ImportGroup>
+  
+  <PropertyGroup Label="UserMacros" Condition="'$(Platform)'=='Win32'">
+    <xrPlatform>Win32</xrPlatform>
+  </PropertyGroup>
+  <PropertyGroup Label="UserMacros" Condition="'$(Platform)'=='x86'">
+    <xrPlatform>Win32</xrPlatform>
+  </PropertyGroup>
+  <PropertyGroup Label="UserMacros" Condition="'$(Platform)'=='x64'">
+    <xrPlatform>Win64</xrPlatform>
+  </PropertyGroup>
+  <PropertyGroup Label="UserMacros" Condition="'$(xrPlatform)'==''">
+    <xrPlatform>$(Platform)</xrPlatform>
+  </PropertyGroup>
+  
+  <PropertyGroup Label="UserMacros">
+    <xrBuildDir>$(SolutionDir)..\xr_build\</xrBuildDir>
+  </PropertyGroup>
+  
+  <PropertyGroup Label="UserMacros">
+    <xrBinRootDir>$(xrBuildDir)bin\</xrBinRootDir>
+    <xrLibRootDir>$(xrBuildDir)lib\</xrLibRootDir>
+    <xrBinDir>$(xrBuildDir)bin\$(xrPlatform)\$(Configuration)\</xrBinDir>
+    <xrLibDir>$(xrBuildDir)lib\$(xrPlatform)\$(Configuration)\</xrLibDir>
+    <xrIntDir>$(xrBuildDir)intermediate\$(xrPlatform)\$(Configuration)\</xrIntDir>
+    <xrSdkDir>$(SolutionDir)..\SDK\</xrSdkDir>
+    <xrExternals>$(SolutionDir)..\externals\</xrExternals>
+  </PropertyGroup>
+  
+  <PropertyGroup Label="OutputDirectories">
+    <OutDir Condition="'$(ConfigurationType)'=='Application'"   >$(xrBinDir)</OutDir>
+    <OutDir Condition="'$(ConfigurationType)'=='DynamicLibrary'">$(xrBinDir)</OutDir>
+    <OutDir Condition="'$(ConfigurationType)'=='StaticLibrary'" >$(xrLibDir)</OutDir>
+    <OutDir Condition="'$(ConfigurationType)'=='Makefile'"      >$(xrLibDir)</OutDir>
+
+    <IntDir>$(xrIntDir)$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  
+  <PropertyGroup Condition="'$(Configuration)'=='Debug'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup> 
+
+  <PropertyGroup Condition="'$(Configuration)'=='Mixed' Or '$(Configuration)'=='Release'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <AdditionalIncludeDirectories>
+        $(SolutionDir);
+        $(xrSdkDir)dxSDK/Include;
+        %(AdditionalIncludeDirectories)
+      </AdditionalIncludeDirectories>
+      
+      <PreprocessorDefinitions>
+        MSVC;
+        WIN32;
+        _WINDOWS;
+        _SECURE_SCL=0;
+        %(PreprocessorDefinitions)
+      </PreprocessorDefinitions>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+    </ClCompile>
+
+    <ClCompile Condition="'$(Configuration)'=='Debug'">
+      <!-- MultiProcessorCompilation isn't compatible with LinkIncremental and UseDebugLibraries -->
+      <MultiProcessorCompilation>false</MultiProcessorCompilation>
+      <Optimization>Disabled</Optimization>
+    </ClCompile>
+
+    <ClCompile Condition="'$(Configuration)'=='Mixed'">
+      <!-- Optimization is automatically enabled when UseDebugLibraries == false. That's why we'll turn it off manually -->
+      <Optimization>Disabled</Optimization>
+    </ClCompile>
+
+    <ClCompile Condition="'$(Configuration)'=='Mixed' Or '$(Configuration)'=='Release'">
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+    </ClCompile>
+
+    <ClCompile Condition="'$(Configuration)'=='Release'">
+      <WholeProgramOptimization>true</WholeProgramOptimization>
+      <Optimization>MaxSpeed</Optimization>
+	  <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+    </ClCompile>
+    
+    <Link>
+      <AdditionalLibraryDirectories>
+        $(xrLibDir);
+        $(xrSdkDir)dxSDK\Lib;
+        %(AdditionalLibraryDirectories)
+      </AdditionalLibraryDirectories>
+      <ImportLibrary>$(xrLibDir)$(TargetName).lib</ImportLibrary>
+      <LargeAddressAware>true</LargeAddressAware>
+      <SubSystem>Windows</SubSystem>
+    </Link>
+
+    <Link Condition="'$(Configuration)'=='Mixed'">
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+
+    <Link Condition="'$(Configuration)'=='Release'">
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <LinkTimeCodeGeneration>UseLinkTimeCodeGeneration</LinkTimeCodeGeneration>
+    </Link>
+
+    <Lib>
+      <AdditionalLibraryDirectories>
+        $(xrLibDir);
+        $(xrSdkDir)dxSDK\Lib;
+        %(AdditionalLibraryDirectories)
+      </AdditionalLibraryDirectories>
+      <OutputFile>$(xrLibDir)$(TargetName).lib</OutputFile>
+    </Lib>
+
+    <Lib Condition="'$(Configuration)'=='Release'">
+      <LinkTimeCodeGeneration>true</LinkTimeCodeGeneration>
+    </Lib>
+  </ItemDefinitionGroup>
+</Project>

@@ -8,7 +8,7 @@
 
 #pragma once
 
-#include <_type_traits.h>
+#include <type_traits>
 #include "object_type_traits.h"
 
 namespace SmartDynamicCast {

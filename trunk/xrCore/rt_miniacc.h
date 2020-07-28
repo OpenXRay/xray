@@ -3169,7 +3169,7 @@ typedef unsigned short wchar_t;
 #    define WIN32_LEAN_AND_MEAN 1
 #  endif
 #  if 1 && !defined(_WIN32_WINNT)
-#    define _WIN32_WINNT 0x0400
+#    define _WIN32_WINNT 0x0501
 #  endif
 #  include <windows.h>
 #  if (ACC_CC_BORLANDC || ACC_CC_TURBOC)

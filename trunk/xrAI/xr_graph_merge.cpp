@@ -7,7 +7,7 @@
 ////////////////////////////////////////////////////////////////////////////
 
 #include "stdafx.h"
-#include "xr_ini.h"
+#include "../xrCore/xr_ini.h"
 #include "xrLevel.h"
 #include "xrAI.h"
 #include "xrServer_Objects_ALife_All.h"

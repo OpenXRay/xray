@@ -31,9 +31,9 @@ struct CDataStorageBucketList {
 		typename _data_storage,
 		template <typename _T> class _vertex = CEmptyClassTemplate
 	>
-	class CDataStorage : public CDataStorageDoubleLinkedList<false>::CDataStorage<_data_storage,BucketList<_vertex>::_vertex> {
+	class CDataStorage : public CDataStorageDoubleLinkedList<false>::template CDataStorage<_data_storage, BucketList<_vertex>::_vertex> {
 	public:
-		typedef typename CDataStorageDoubleLinkedList<false>::CDataStorage<
+		typedef typename CDataStorageDoubleLinkedList<false>::template CDataStorage<
 			_data_storage,
 			BucketList<_vertex>::_vertex
 		>											inherited;

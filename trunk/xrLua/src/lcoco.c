@@ -43,7 +43,7 @@
 /* Use Windows Fibers. */
 #if defined(COCO_USE_FIBERS)
 
-#define _WIN32_WINNT 0x0400
+#define _WIN32_WINNT 0x0501
 #include <windows.h>
 
 #define COCO_MAIN_DECL		CALLBACK

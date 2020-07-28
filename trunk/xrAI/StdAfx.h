@@ -18,7 +18,7 @@
 #define ENGINE_API
 #define ECORE_API
 #define XR_EPROPS_API
-#include "clsid.h"
+#include "../xrCore/clsid.h"
 #include "defines.h"
 #include "cl_log.h"
 #include "xrCDB.h"

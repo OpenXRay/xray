@@ -28,7 +28,7 @@
 #include <boost/config.hpp>
 
 namespace std {
-	void terminate();
+	void _terminate();
 }
 
 #ifdef BOOST_MSVC
